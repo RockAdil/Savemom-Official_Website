@@ -1,14 +1,14 @@
 import React from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
+import { Link } from 'react-router-dom';
 
 import './navbar.scss';
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className='navbar navbar-expand-lg navbar-light bg-light fixed-top'>
-      <nav className='container p-2'>
-        <a className='navbar-brand' href='/'>
+      <div className='container p-1'>
+        <Link to='/' className='navbar-brand'>
           <img
             src='https://www.savemom.in/img/logo.png'
             width='40'
@@ -18,7 +18,7 @@ const Navbar = () => {
             alt=''
           />
           Savemom
-        </a>
+        </Link>
         <button
           className='navbar-toggler'
           type='button'
@@ -36,55 +36,50 @@ const Navbar = () => {
           className='collapse navbar-collapse justify-content-end'
           id='navbarNavDropdown'
         >
-          <ul className='navbar-nav active  '>
+          <ul className='navbar-nav active'>
             <li className='nav-item'>
-              <Link to={'/woweare'}>
-                <a className='nav-link' href='#whoweare'>
-                  Who We Are
-                </a>
+              <Link to='/whoweare' className='nav-link'>
+                Who We Are
               </Link>
             </li>
             <li className='nav-item dropdown'>
-              <a
+              <Link
+                to='/ourjourney'
                 className='nav-link dropdown-toggle'
-                href='#'
-                id='navbarDropdownMenuLink'
-                role='button'
                 data-bs-toggle='dropdown'
-                aria-expanded='false'
               >
                 Our Work
-              </a>
+              </Link>
               <div
                 className='dropdown-menu'
                 aria-labelledby='navbarDropdownMenuLink'
               >
-                <a className='dropdown-item' href='#'>
+                <Link to='/ourjourney' className='dropdown-item'>
                   Our Journey
-                </a>
-                <a className='dropdown-item' href='#'>
+                </Link>
+                <Link to='/howwework' className='dropdown-item'>
                   How We Work
-                </a>
+                </Link>
               </div>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#whoweare'>
+              <Link to='/product' className='nav-link'>
                 Product
-              </a>
+              </Link>
             </li>
-            <li className='nav-item active'>
-              <a className='nav-link' href='#whoweare'>
+            <li className='nav-item'>
+              <Link to='/newsreports' className='nav-link'>
                 News & Reports
-              </a>
+              </Link>
             </li>
-            <li className='nav-item active'>
-              <a className='nav-link' href='#whoweare'>
+            <li className='nav-item'>
+              <Link to='/getinvolved' className='nav-link'>
                 Get Involved
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
-      </nav>
+      </div>
     </nav>
   );
 };

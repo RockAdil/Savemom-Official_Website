@@ -1,7 +1,14 @@
 import React from 'react';
 
-const whoWeAre = () => {
-  return <div>whoWeAre</div>;
+import './whoWeAre.scss';
+import Navbar from '../../containers/Navbar/Navbar';
+
+const WhoWeAre = () => {
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 };
 
-export default whoWeAre;
+export default WhoWeAre;

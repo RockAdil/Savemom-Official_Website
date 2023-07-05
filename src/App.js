@@ -1,6 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home } from './components';
+import {
+  Home,
+  WhoWeAre,
+  GetInvolved,
+  HowWeWork,
+  NewsReports,
+  OurJourney,
+  Product,
+} from './components';
 
 import './App.scss';
 
@@ -8,7 +16,13 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/whoweare' element={<Home />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/whoweare' element={<WhoWeAre />} />
+        <Route path='/ourjourney' element={<OurJourney />} />
+        <Route path='/howwework' element={<HowWeWork />} />
+        <Route path='/product' element={<Product />} />
+        <Route path='/newsreports' element={<NewsReports />} />
+        <Route path='/getInvolved' element={<GetInvolved />} />
       </Routes>
     </Router>
   );
