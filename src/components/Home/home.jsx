@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import Navbar from '../../containers/Navbar/Navbar';
 import './home.scss';
@@ -170,6 +171,28 @@ const Home = () => {
           </p>
         </div>
       </div>
+
+      {/* CONTENT - 3 */}
+      <div className='home__content-3' style={{ backgroundColor: '#00877c' }}>
+        <div className='section__padding'>
+          <h3 className='head-text'>ABOUT US</h3>
+          <p className='p-text'>
+            Savemom provides connected maternal care at home using local
+            communities, smart devices and telemedicine software.
+          </p>
+          <Link to='/whoweare'>
+            <Button
+              variant='outline-light'
+              size='lg'
+              className='watch-now-button'
+            >
+              Read More
+            </Button>
+          </Link>
+        </div>
+      </div>
+
+      {/* CONTENT - 4 */}
     </>
   );
 };
