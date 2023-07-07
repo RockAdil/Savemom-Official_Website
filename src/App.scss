@@ -10,7 +10,7 @@
   }
 
   @media screen and (max-width: 550px) {
-    padding: 2rem 1rem; // Change both to '2rem', remove '4rem'
+    padding: 2rem 1rem;
   }
 }
 
@@ -39,6 +39,20 @@ a {
   @media screen and (max-width: 550px) {
     font-size: 1.1rem;
     letter-spacing: 3px;
+  }
+}
+
+.sub__head-text {
+  font-size: 24px;
+  color: #000;
+  font-weight: 500;
+
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 18px;
   }
 }
 
