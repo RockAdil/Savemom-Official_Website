@@ -1,0 +1,107 @@
+.whoweare__about {
+  position: absolute;
+  top: -5%;
+  width: 100vw;
+  height: 60vh;
+  background-image: url('https://www.savemom.in/images/staticpages/achievementbanner.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 1150px) {
+    top: 5%;
+    height: 50vh;
+  }
+
+  @media screen and (max-width: 900px) {
+    top: 10%;
+    height: 40vh;
+  }
+
+  @media screen and (max-width: 800px) {
+    top: 5%;
+    height: 35vh;
+  }
+
+  @media screen and (max-width: 600px) {
+    height: 30vh;
+  }
+
+  @media screen and (max-width: 400px) {
+    top: 7%;
+    height: 25vh;
+  }
+}
+
+.whoweare__about-content {
+  margin: 5rem 0 0 4rem;
+  width: 60%;
+
+  @media screen and (max-width: 1150px) {
+    margin: 1rem 0 0 2.5rem;
+    width: 75%;
+  }
+
+  @media screen and (max-width: 900px) {
+    margin: -1rem 0 0 2rem;
+    width: 90%;
+  }
+
+  @media screen and (max-width: 800px) {
+    margin: 3.5rem 0 0 2rem;
+  }
+
+  @media screen and (max-width: 550px) {
+    margin: 1.9rem 0 0 2rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin: 14px 0 0 1rem;
+  }
+
+  p {
+    padding: 0;
+    font-weight: 500;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: 800px) {
+      color: black;
+      margin-top: 4.5rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-top: 3.5rem;
+    }
+
+    @media screen and (max-width: 700px) {
+      margin-top: 3rem;
+    }
+
+    @media screen and (max-width: 550px) {
+      font-size: 14px;
+      margin-top: 2.5rem;
+    }
+  }
+
+  h3 {
+    @media screen and (max-width: 1000px) {
+      font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: 800px) {
+      font-size: 2rem;
+      margin-top: 5px;
+    }
+
+    @media screen and (max-width: 500px) {
+      margin-top: 1rem;
+    }
+
+    @media screen and (max-width: 450px) {
+      font-size: 1.7rem;
+      // margin-top: 0;
+    }
+  }
+}

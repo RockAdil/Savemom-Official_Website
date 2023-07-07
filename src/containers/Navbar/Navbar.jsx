@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 
 import './navbar.scss';
 
-const Navbar = () => {
+const Navbar = ({ nav_bgcolor = 'bg-light', nav_color = 'navbar-light' }) => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-light bg-light fixed-top'>
+    <nav
+      className={`navbar navbar-expand-lg ${nav_color} ${nav_bgcolor} fixed-top`}
+      style={{ backgroundColor: '#00877c', color: '#ffff' }}
+    >
       <div className='container p-1'>
         <Link to='/' className='navbar-brand'>
           <img
