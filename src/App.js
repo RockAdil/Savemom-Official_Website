@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   Home,
-  // WhoWeAre,
+  WhoWeAre,
   // GetInvolved,
   // HowWeWork,
   // NewsReports,
@@ -17,8 +17,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route path='/' element={<Home />} />
-        {/* <Route path='/whoweare' element={<WhoWeAre />} />
-        <Route path='/ourjourney' element={<OurJourney />} />
+        <Route path='/whoweare' element={<WhoWeAre />} />
+        {/* <Route path='/ourjourney' element={<OurJourney />} />
         <Route path='/howwework' element={<HowWeWork />} />
         <Route path='/product' element={<Product />} />
         <Route path='/newsreports' element={<NewsReports />} />

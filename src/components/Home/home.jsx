@@ -179,7 +179,7 @@ const Home = () => {
           transition={{ duration: 0.5 }}
           className='app__header-info'
         >
-          <div className='section__padding'>
+          <div className='section__padding home__content-2_info'>
             <h3 className='head-text'>
               THE WAVELET IS EXTENSIVE IF A MOTHER DIES
             </h3>
