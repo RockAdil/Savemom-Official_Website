@@ -114,44 +114,44 @@
     display: flex;
     align-items: center;
   }
-}
 
-.app__wrapper_info {
-  padding: 0 2rem;
-  text-align: center;
-
-  @media screen and (max-width: 450px) {
-    padding: 0;
-  }
-
-  h3 {
-    padding: 1rem 0;
-
-    @media screen and (max-width: 800px) {
-      padding: 1rem 0 8px;
-    }
-  }
-
-  p {
-    color: gray;
-    font-size: 16px;
-    padding: 8px 0;
-
-    @media screen and (max-width: 800px) {
-      font-size: 14px;
-      padding: 6px 0;
-    }
+  .app__wrapper_info {
+    padding: 0 2rem;
+    text-align: center;
 
     @media screen and (max-width: 450px) {
-      font-size: 13px;
-      padding-bottom: 12px;
+      padding: 0;
     }
-  }
 
-  img {
-    @media screen and (max-width: 450px) {
-      width: 63px;
-      height: 60px;
+    h3 {
+      padding: 1rem 0;
+
+      @media screen and (max-width: 800px) {
+        padding: 1rem 0 8px;
+      }
+    }
+
+    p {
+      color: gray;
+      font-size: 16px;
+      padding: 8px 0;
+
+      @media screen and (max-width: 800px) {
+        font-size: 14px;
+        padding: 6px 0;
+      }
+
+      @media screen and (max-width: 450px) {
+        font-size: 13px;
+        padding-bottom: 12px;
+      }
+    }
+
+    img {
+      @media screen and (max-width: 450px) {
+        width: 63px;
+        height: 60px;
+      }
     }
   }
 }
@@ -172,23 +172,25 @@
     @media screen and (max-width: 550px) {
       padding: 2rem 1rem;
     }
-  }
 
-  .app__wrapper {
-    min-height: 0;
-    align-items: flex-start;
-  }
-
-  .app__wrapper_info {
-    align-items: center;
-
-    h3 {
-      color: #fff;
+    .app__wrapper {
+      min-height: 0;
+      align-items: flex-start;
     }
 
-    p {
-      color: #ffffffae;
-      padding-bottom: 1rem;
+    .app__wrapper_info {
+      align-items: center;
+      text-align: center;
+
+      h3 {
+        color: #fff;
+        padding-top: 1rem;
+      }
+
+      p {
+        color: #ffffffae;
+        padding: 1rem;
+      }
     }
   }
 
@@ -333,7 +335,7 @@
   }
 }
 
-// -------- CONTENT - 4 -----------
+// -------- CONTENT - 5 -----------
 .whoweare__content-5 {
   display: flex;
   align-items: center;
@@ -351,13 +353,6 @@
 
     @media screen and (max-width: 550px) {
       margin-top: 2rem;
-    }
-  }
-
-  p {
-    @media screen and (max-width: 550px) {
-      font-size: 12px;
-      line-height: 1.2em;
     }
   }
 
@@ -387,19 +382,19 @@
       }
 
       @media screen and (max-width: 550px) {
-        padding-top: 3rem;
+        padding-top: 2.5rem;
       }
     }
 
     .content-5_brand-img {
       position: relative;
       min-width: 200px;
-      height: 220px;
+      height: 200px;
       margin-right: 3rem;
 
       @media screen and (max-width: 550px) {
         min-width: 100px;
-        height: 130px;
+        height: 170px;
         margin-right: 2rem;
       }
 
@@ -410,6 +405,93 @@
         @media screen and (max-width: 550px) {
           width: 80px;
           height: 60px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        padding-top: 1rem;
+        line-height: 20px;
+
+        @media screen and (max-width: 550px) {
+          font-size: 12px;
+          line-height: 1.2em;
+        }
+      }
+    }
+  }
+}
+
+// --------- CONTENT - 7 ---------------
+.whoweare__content-7 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  // margin-top: 3rem;
+
+  .head-line {
+    width: 80px;
+    height: 2px;
+    background-color: #00877c;
+  }
+
+  h3 {
+    margin-top: 3.5rem;
+
+    @media screen and (max-width: 550px) {
+      margin-top: 2rem;
+    }
+  }
+
+  .content-7_partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 2rem;
+    // text-align: center;
+    // flex-direction: row;
+    // max-width: 100%;
+    // position: relative;
+
+    @media screen and (max-width: 550px) {
+      padding: 2rem 0 1rem;
+    }
+
+    .content-7_partner-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      // position: relative;
+      // min-width: 200px;
+      // height: 200px;
+      padding: 0 3rem;
+
+      @media screen and (max-width: 550px) {
+        // min-width: 100px;
+        // height: 150px;
+        padding: 0 1rem;
+      }
+
+      img {
+        width: 120px;
+        height: 100px;
+
+        @media screen and (max-width: 550px) {
+          width: 50px;
+          height: 40px;
+        }
+      }
+
+      p {
+        font-size: 13px;
+        padding-top: 1rem;
+        line-height: 23px;
+
+        @media screen and (max-width: 550px) {
+          font-size: 11px;
+          line-height: 1.2em;
         }
       }
     }

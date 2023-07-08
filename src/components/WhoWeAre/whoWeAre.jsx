@@ -1,30 +1,52 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar from '../../containers/Navbar/Navbar';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 import './whoWeAre.scss';
 import { youtubeVideos } from '../../containers/Youtube/Youtube';
-import { Brand } from '../../containers/Brand/Brand';
+import { Supporters, Awards, Partners } from '../../containers/Brand/Brand';
+import Map from '../../containers/Map/Map';
+import Contact from '../../containers/Contact/Contact';
 
 const WhoWeAre = () => {
   const scrollRef = useRef(null);
-  const moveRef = useRef(null);
+  const moveRef1 = useRef(null);
+  const moveRef2 = useRef(null);
 
   const scroll = (direction) => {
     const { current } = scrollRef;
 
-    if (direction === 'left') {
-      current.scrollLeft -= 300;
-    } else {
-      current.scrollLeft += 300;
+    if (current !== null) {
+      if (direction === 'left') {
+        current.scrollLeft -= 300;
+      } else {
+        current.scrollLeft += 300;
+      }
     }
   };
 
-  setInterval(function () {
-    const { current } = moveRef;
+  useEffect(() => {
+    const scrollInterval = setInterval(() => {
+      const { current } = moveRef1;
 
-    current.scrollLeft += 250;
-  }, 5000);
+      if (current !== null) {
+        current.scrollLeft += 250;
+      }
+    }, 4000);
+
+    const moveInterval = setInterval(() => {
+      const { current } = moveRef2;
+
+      if (current !== null) {
+        current.scrollLeft += 250;
+      }
+    }, 7000);
+
+    return () => {
+      clearInterval(scrollInterval);
+      clearInterval(moveInterval);
+    };
+  }, []);
 
   return (
     <>
@@ -221,8 +243,8 @@ const WhoWeAre = () => {
         <div className='head-line' />
 
         <div className='content-5_brand'>
-          <div className='content-5_brand_container' ref={moveRef}>
-            {Brand.map((brand, index) => (
+          <div className='content-5_brand_container' ref={moveRef1}>
+            {Supporters.map((brand, index) => (
               <div className='content-5_brand-img' key={index}>
                 <img src={brand.src} alt={brand.title} />
                 <p className='p-text' style={{ color: '#000' }}>
@@ -233,6 +255,52 @@ const WhoWeAre = () => {
           </div>
         </div>
       </div>
+
+      {/* CONTENT - 6  (content-5 Stylying is used for Content-6 so that className are same as the Content-5)  */}
+      <div className='whoweare__content-5'>
+        <h3 className='sub_head-text' style={{ textAlign: 'center' }}>
+          Awards
+        </h3>
+        <div className='head-line' />
+
+        <div className='content-5_brand'>
+          <div className='content-5_brand_container' ref={moveRef2}>
+            {Awards.map((brand, index) => (
+              <div className='content-5_brand-img' key={index}>
+                <img src={brand.src} alt={brand.title} />
+                <p className='p-text' style={{ color: '#000' }}>
+                  {brand.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CONTENT - 7 */}
+      <div className='whoweare__content-7'>
+        <h3 className='sub_head-text' style={{ textAlign: 'center' }}>
+          Our Key Partner(s)
+        </h3>
+        <div className='head-line' />
+
+        <div className='content-7_partner'>
+          {Partners.map((brand, index) => (
+            <div className='content-7_partner-img' key={index}>
+              <img src={brand.src} alt={brand.title} />
+              <p className='p-text' style={{ color: '#000' }}>
+                {brand.name}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* MAP */}
+      <Map />
+
+      {/* CONTACT */}
+      <Contact />
     </>
   );
 };
