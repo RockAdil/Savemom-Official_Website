@@ -181,6 +181,7 @@ const WhoWeAre = () => {
         <h3 className='sub_head-text' style={{ textAlign: 'center' }}>
           Impact of Savemom
         </h3>
+        <div className='head-line' />
 
         <div className='content-3_youtube'>
           <div className='content-3_youtube_container' ref={scrollRef}>
