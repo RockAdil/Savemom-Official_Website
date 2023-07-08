@@ -106,6 +106,7 @@
   }
 }
 
+// -------- CONTENT - 1 -----------
 .whoweare__content-1 {
   margin-top: 24rem;
 
@@ -155,6 +156,7 @@
   }
 }
 
+// -------- CONTENT - 2 -----------
 .whoweare__content-2 {
   .section__padding {
     padding: 2rem 4rem 0;
@@ -207,7 +209,7 @@
   }
 }
 
-// CONTENT - 3
+// -------- CONTENT - 3 -----------
 .whoweare__content-3 {
   display: flex;
   justify-content: center;
@@ -289,6 +291,44 @@
       color: #fff;
       background-color: #00877c;
       margin: 0 8px;
+    }
+  }
+}
+
+// -------- CONTENT - 4 -----------
+.whoweare__content-4 {
+  .whoweare__content-4_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .whoweare__content-4_info-count {
+    padding: 0 5rem;
+
+    @media screen and (max-width: 1150px) {
+      padding: 1rem 3rem;
+    }
+
+    @media screen and (max-width: 550px) {
+      padding: 0.5rem 2rem;
+    }
+
+    h1 {
+      color: #fff;
+      // text-align: center;
+    }
+
+    p {
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+
+      @media screen and (max-width: 550px) {
+        font-size: 15px;
+      }
     }
   }
 }

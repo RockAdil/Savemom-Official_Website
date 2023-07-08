@@ -211,6 +211,37 @@ const WhoWeAre = () => {
           />
         </div>
       </div>
+
+      {/* CONTENT - 4 */}
+      <div
+        className='whoweare__content-4'
+        style={{ backgroundColor: '#00877c' }}
+      >
+        <div className='section__padding'>
+          <div className='whoweare__content-4_info'>
+            <div className='whoweare__content-4_info-count'>
+              <h1 className='count'>1000+</h1>
+              <p className='count-text'>Women Reached</p>
+            </div>
+            <div className='whoweare__content-4_info-count'>
+              <h1 className='count'>2+</h1>
+              <p className='count-text'>Years</p>
+            </div>
+            <div className='whoweare__content-4_info-count'>
+              <h1 className='count'>25+</h1>
+              <p className='count-text'>Programs</p>
+            </div>
+            <div className='whoweare__content-4_info-count'>
+              <h1 className='count'>20+</h1>
+              <p className='count-text'>Partners</p>
+            </div>
+            <div className='whoweare__content-4_info-count'>
+              <h1 className='count'>5+</h1>
+              <p className='count-text'>Countries</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
