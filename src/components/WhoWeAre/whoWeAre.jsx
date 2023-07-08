@@ -3,48 +3,12 @@ import Navbar from '../../containers/Navbar/Navbar';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 import './whoWeAre.scss';
-
-const youtubeVideos = [
-  {
-    src: 'https://www.youtube.com/embed/Z_374EOhCAs',
-    title:
-      'Artificial Intelligence for Villages | Senthil Kumar M | TEDxBITSathy',
-  },
-  {
-    src: 'https://www.youtube.com/embed/YjXAuVejpT4',
-    title:
-      'Innovation India 2018 | A Platform for Emerging Entrepreneurs | Episode-7 | DD National',
-  },
-  {
-    src: 'https://www.youtube.com/embed/OYHm7-_MpKQ',
-    title: 'கல்லாதது உலகளவு 16-06-2018 - JAYAPLUS',
-  },
-  {
-    src: 'https://www.youtube.com/embed/lIEm7xuGels',
-    title: 'SaveMom',
-  },
-  {
-    src: 'https://www.youtube.com/embed/lpPBnus4Y3w',
-    title:
-      'The Vault | Pitch - Save Mom - The latest must have wearable device for Pregnant Women',
-  },
-  {
-    src: 'https://www.youtube.com/embed/SpiF6rJ_dMo',
-    title: 'Savemom: technology with social impact- Meet Mr.  Senthil kumar',
-  },
-  {
-    src: 'https://www.youtube.com/embed/z1ggAMB9hc4',
-    title:
-      'Olive Wear with its wearable products is helping expectant mothers during their journey',
-  },
-  {
-    src: 'https://www.youtube.com/embed/DMi4xBCIi6o',
-    title: 'SaveMom, JioVio Healthcare - Ms  Divya Krishnan',
-  },
-];
+import { youtubeVideos } from '../../containers/Youtube/Youtube';
+import { Brand } from '../../containers/Brand/Brand';
 
 const WhoWeAre = () => {
   const scrollRef = useRef(null);
+  const moveRef = useRef(null);
 
   const scroll = (direction) => {
     const { current } = scrollRef;
@@ -55,6 +19,12 @@ const WhoWeAre = () => {
       current.scrollLeft += 300;
     }
   };
+
+  setInterval(function () {
+    const { current } = moveRef;
+
+    current.scrollLeft += 250;
+  }, 5000);
 
   return (
     <>
@@ -239,6 +209,27 @@ const WhoWeAre = () => {
               <h1 className='count'>5+</h1>
               <p className='count-text'>Countries</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CONTENT - 5 */}
+      <div className='whoweare__content-5'>
+        <h3 className='sub_head-text' style={{ textAlign: 'center' }}>
+          Supporters
+        </h3>
+        <div className='head-line' />
+
+        <div className='content-5_brand'>
+          <div className='content-5_brand_container' ref={moveRef}>
+            {Brand.map((brand, index) => (
+              <div className='content-5_brand-img' key={index}>
+                <img src={brand.src} alt={brand.title} />
+                <p className='p-text' style={{ color: '#000' }}>
+                  {brand.name}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
