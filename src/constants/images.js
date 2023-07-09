@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png';
-import achievementbanner from '../assets/achievementbanner.png';
+import process from '../assets/process.png';
 
 import startupkarnataka from '../assets/startupkarnataka.jpg';
 import fbstartup from '../assets/fbstartup.jpg';
@@ -30,6 +30,7 @@ import village from '../assets/village.png';
 
 export default {
   logo,
+  process,
   startupkarnataka,
   fbstartup,
   launchpad,
