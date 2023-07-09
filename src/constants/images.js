@@ -1,4 +1,6 @@
 import logo from '../assets/logo.png';
+import achievementbanner from '../assets/achievementbanner.png';
+
 import startupkarnataka from '../assets/startupkarnataka.jpg';
 import fbstartup from '../assets/fbstartup.jpg';
 import launchpad from '../assets/launchpad.jpg';
