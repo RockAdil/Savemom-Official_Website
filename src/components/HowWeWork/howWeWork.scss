@@ -1,0 +1,132 @@
+.howwework__padding {
+  width: 100%;
+  height: 60vh;
+
+  @media screen and (max-width: 1150px) {
+    height: 55vh;
+  }
+
+  @media screen and (max-width: 800px) {
+    height: 62vh;
+  }
+
+  @media screen and (max-width: 550px) {
+    height: 50vh;
+  }
+
+  @media screen and (max-width: 475px) {
+    height: 53vh;
+  }
+
+  @media screen and (max-width: 370px) {
+    height: 57vh;
+  }
+
+  .howwework__work {
+    background-image: url('../../assets/achievementbanner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+
+    @media screen and (max-width: 1150px) {
+      height: 55vh;
+    }
+
+    @media screen and (max-width: 800px) {
+      height: 40vh;
+      top: 5%;
+    }
+
+    @media screen and (max-width: 550px) {
+      height: 33vh;
+    }
+
+    @media screen and (max-width: 450px) {
+      top: 7%;
+      height: 25vh;
+    }
+  }
+
+  .howwework__work-content {
+    margin: 5rem 4rem;
+    width: 60%;
+
+    @media screen and (max-width: 1150px) {
+      width: 75%;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 80%;
+      margin: 5rem 0 0 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 90%;
+      margin: 3.5rem 0 0 1rem;
+    }
+
+    @media screen and (max-width: 450px) {
+      margin: 1.5rem 0 0 1rem;
+    }
+  }
+
+  p {
+    font-weight: 500;
+
+    @media screen and (max-width: 800px) {
+      color: black;
+      margin-top: 3rem;
+    }
+
+    @media screen and (max-width: 550px) {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 450px) {
+      margin-top: 3.5rem;
+    }
+  }
+
+  h3 {
+    @media screen and (max-width: 800px) {
+      font-size: 2.3rem;
+    }
+
+    @media screen and (max-width: 550px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 450px) {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.howwework__content-1 {
+  .howwework__content-1_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
+
+      &:last-child {
+        display: none;
+
+        @media screen and (max-width: 700px) {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -27,6 +27,13 @@ import meddev from '../assets/meddev.jpg';
 import serve from '../assets/serve.png';
 import doctor from '../assets/doctor.png';
 import village from '../assets/village.png';
+// How We Work
+import savemomproducts from '../assets/savemomproducts.png';
+import savemomproducts_mbl from '../assets/kitmobileimage4.png';
+import contributors from '../assets/contributors6.png';
+import workflow from '../assets/workflow.png';
+import workflow_mbl from '../assets/savemomworkflow2.png';
+import map from '../assets/map.png';
 
 export default {
   logo,
@@ -55,4 +62,10 @@ export default {
   serve,
   doctor,
   village,
+  savemomproducts,
+  savemomproducts_mbl,
+  contributors,
+  workflow,
+  workflow_mbl,
+  map,
 };
