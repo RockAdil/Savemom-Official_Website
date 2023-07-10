@@ -1,10 +1,8 @@
 import React from 'react';
 
 import './ourJourney.scss';
-import Navbar from '../../containers/Navbar/Navbar';
 import { images } from '../../constants';
-import Map from '../../containers/Map/Map';
-import Contact from '../../containers/Contact/Contact';
+import { Navbar, Map, Contact } from '../../containers';
 
 const OurJourney = () => {
   return (
@@ -80,8 +78,6 @@ const OurJourney = () => {
           <div className='app__wrapper_info'>
             <h3 className='sub__head-text'>Our Progress</h3>
             <small className='head-line' />
-
-            {/* <div className='head-line' /> */}
 
             <ul>
               <li>

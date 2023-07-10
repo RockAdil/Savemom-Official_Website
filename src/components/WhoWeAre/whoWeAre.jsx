@@ -3,10 +3,14 @@ import Navbar from '../../containers/Navbar/Navbar';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 import './whoWeAre.scss';
-import { youtubeVideos } from '../../containers/Youtube/Youtube';
-import { Supporters, Awards, Partners } from '../../containers/Brand/Brand';
-import Map from '../../containers/Map/Map';
-import Contact from '../../containers/Contact/Contact';
+import {
+  Map,
+  Contact,
+  youtubeVideos,
+  Supporters,
+  Awards,
+  Partners,
+} from '../../containers';
 
 const WhoWeAre = () => {
   const scrollRef = useRef(null);

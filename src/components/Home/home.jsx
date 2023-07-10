@@ -4,9 +4,7 @@ import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import Navbar from '../../containers/Navbar/Navbar';
-import Map from '../../containers/Map/Map';
-import Contact from '../../containers/Contact/Contact';
+import { Navbar, Map, Contact } from '../../containers';
 import './home.scss';
 
 const Home = () => {

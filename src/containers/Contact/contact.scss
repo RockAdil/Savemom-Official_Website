@@ -165,6 +165,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem 0;
+  text-align: center;
 
   small {
     font-size: 13px;
@@ -173,6 +174,11 @@
     @media screen and (max-width: 550px) {
       font-size: 11px;
     }
+  }
+
+  .adil-link {
+    color: #00877c;
+    font-weight: 600;
   }
 }
 

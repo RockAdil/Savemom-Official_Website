@@ -218,7 +218,18 @@ const Contact = () => {
       </div>
 
       <div className='footer'>
-        <small>Copyright © 2018 Jiovio Healthcare | Sitemap</small>
+        <small>
+          Copyright © 2018 Jiovio Healthcare <br /> © Content Owned And
+          Maintained By Jiovio Healthcare, Developed And Hosted By{' '}
+          <a
+            href='https://adilahamed.vercel.app'
+            className='adil-link'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Adil Ahamed.
+          </a>
+        </small>
       </div>
     </>
   );
