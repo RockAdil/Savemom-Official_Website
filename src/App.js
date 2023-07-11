@@ -5,9 +5,9 @@ import {
   WhoWeAre,
   OurJourney,
   HowWeWork,
+  Product,
   // GetInvolved,
   // NewsReports,
-  // Product,
 } from './components';
 
 import './App.scss';
@@ -20,8 +20,8 @@ const App = () => {
         <Route path='/whoweare' element={<WhoWeAre />} />
         <Route path='/ourjourney' element={<OurJourney />} />
         <Route path='/howwework' element={<HowWeWork />} />
-        {/* <Route path='/product' element={<Product />} />
-        <Route path='/newsreports' element={<NewsReports />} />
+        <Route path='/product' element={<Product />} />
+        {/* <Route path='/newsreports' element={<NewsReports />} />
         <Route path='/getInvolved' element={<GetInvolved />} /> */}
       </Routes>
     </Router>
