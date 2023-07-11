@@ -34,6 +34,22 @@ import contributors from '../assets/contributors6.png';
 import workflow from '../assets/workflow.png';
 import workflow_mbl from '../assets/savemomworkflow2.png';
 import map from '../assets/map.png';
+// Product
+import mbl_pic_1 from '../assets/mbl_pic-1.jpg';
+import mbl_pic_2 from '../assets/mbl_pic-2.jpg';
+import mbl_pic_3 from '../assets/mbl_pic-3.jpg';
+import mbl_pic_4 from '../assets/mbl_pic-4.jpg';
+import mbl_pic_5 from '../assets/mbl_pic-5.jpg';
+import mbl_pic_6 from '../assets/mbl_pic-6.jpg';
+import mbl_pic_7 from '../assets/mbl_pic-7.jpg';
+import mbl_pic_8 from '../assets/mbl_pic-8.jpg';
+import mbl_pic_9 from '../assets/mbl_pic-9.jpg';
+import mbl_pic_10 from '../assets/mbl_pic-10.jpg';
+import mbl_pic_11 from '../assets/mbl_pic-11.jpg';
+import mbl_pic_12 from '../assets/mbl_pic-12.jpg';
+import mbl_pic_13 from '../assets/mbl_pic-13.jpg';
+import mbl_pic_14 from '../assets/mbl_pic-14.jpg';
+import mbl_pic_15 from '../assets/mbl_pic-15.jpg';
 
 export default {
   logo,
@@ -68,4 +84,19 @@ export default {
   workflow,
   workflow_mbl,
   map,
+  mbl_pic_1,
+  mbl_pic_2,
+  mbl_pic_3,
+  mbl_pic_4,
+  mbl_pic_5,
+  mbl_pic_6,
+  mbl_pic_7,
+  mbl_pic_8,
+  mbl_pic_9,
+  mbl_pic_10,
+  mbl_pic_11,
+  mbl_pic_12,
+  mbl_pic_13,
+  mbl_pic_14,
+  mbl_pic_15,
 };

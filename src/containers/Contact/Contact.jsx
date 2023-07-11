@@ -14,10 +14,17 @@ import { Link } from 'react-router-dom';
 import { Row, Col, Form } from 'react-bootstrap';
 import { FaArrowCircleUp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
 import './contact.scss';
 
 const Contact = () => {
+  // Form Data
+  const [name, setName] = useState('');
+  const [mobile_no, setMobile_no] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
   const [visible, setVisible] = useState(false);
 
   const toggleVisible = () => {
@@ -37,6 +44,30 @@ const Contact = () => {
   };
 
   window.addEventListener('scroll', toggleVisible);
+
+  let sumbit = async () => {
+    let one = await axios({
+      method: 'post',
+      url: 'https://savemom-userform-7ddb4-default-rtdb.firebaseio.com/User.json',
+      headers: { 'Content-Type': 'application/json' },
+      data: {
+        name: `${name}`,
+        mobile_number: `${mobile_no}`,
+        email: `${email}`,
+        message: `${message}`,
+      },
+    })
+      .then((res) => {
+        console.log(res, 'Data Stored');
+        setName('');
+        setMobile_no('');
+        setEmail('');
+        setMessage('');
+      })
+      .catch((err) => {
+        console.log(err, 'Something Error!!');
+      });
+  };
 
   return (
     <>
@@ -153,6 +184,8 @@ const Contact = () => {
                         <Form.Control
                           type='text'
                           placeholder='Enter name'
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
                           required
                         />
                       </Form.Group>
@@ -167,6 +200,8 @@ const Contact = () => {
                         <Form.Control
                           type='number'
                           placeholder='Enter number'
+                          value={mobile_no}
+                          onChange={(e) => setMobile_no(e.target.value)}
                           required
                         />
                       </Form.Group>
@@ -183,6 +218,8 @@ const Contact = () => {
                         <Form.Control
                           type='email'
                           placeholder='name@example.com'
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                           required
                         />
                       </Form.Group>
@@ -194,11 +231,24 @@ const Contact = () => {
                         controlId='exampleForm.ControlTextarea1'
                       >
                         <Form.Label>Message</Form.Label>
-                        <Form.Control as='textarea' rows={3} required />
+                        <Form.Control
+                          as='textarea'
+                          rows={3}
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                          required
+                        />
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Button className='btn btn_custom'>Send Message</Button>
+                  <Button
+                    className='btn btn_custom'
+                    onClick={() => {
+                      sumbit();
+                    }}
+                  >
+                    Send Message
+                  </Button>
                 </Form>
               </Container>
             </div>

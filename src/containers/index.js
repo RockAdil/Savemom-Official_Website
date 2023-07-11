@@ -3,3 +3,4 @@ export { default as Contact } from './Contact/Contact';
 export { default as Map } from './Map/Map';
 export { default as Navbar } from './Navbar/Navbar';
 export { youtubeVideos } from './Youtube/Youtube';
+export { MobilePics } from './Mobile_Pics/MobilePics';
