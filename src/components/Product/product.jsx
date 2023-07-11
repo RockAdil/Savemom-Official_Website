@@ -3,6 +3,7 @@ import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 import './product.scss';
 import { Navbar, MobilePics } from '../../containers';
+import { images } from '../../constants';
 
 const Product = () => {
   const scrollRef = useRef(null);
@@ -65,6 +66,103 @@ const Product = () => {
             className='img__arror-icon'
             onClick={() => scroll('right')}
           />
+        </div>
+      </div>
+
+      {/* CONTENT - 2 */}
+      <div className='product__content-2'>
+        <h3 className='head-text'>Download the app here</h3>
+        <a
+          href='https://play.google.com/store/apps/details?id=jiovio.savemom.app&pli=1'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <img src={images.google_play} alt='google-play' />
+        </a>
+      </div>
+
+      {/* CONTENT - 3 */}
+      <div className='product__content-3'>
+        <h3 className='sub__head-text'>Savemom Kit</h3>
+        <small className='head__line' />
+        <div className='product__content-3_info'>
+          {/* CARDs */}
+          <div className='row'>
+            <div className='col-sm-4'>
+              <div className='card'>
+                <img
+                  className='card-img-top'
+                  src={images.allowear}
+                  alt='Card imagecap'
+                  style={{
+                    backgroundImage:
+                      'url(https://www.savemom.in/img/productbg.jpg)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    height: '225px',
+                  }}
+                />
+                <div className='card-body' style={{ paddingBottom: '3rem' }}>
+                  <h5 className='card-title'>Allowear</h5>
+                  <p className='card-text'>
+                    A smart wearable device which continuously tracks activity,
+                    sleep cycle reminds to take medicine, checkup and that
+                    increases the interaction of patient.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='col-sm-4'>
+              <div className='card'>
+                <img
+                  className='card-img-top'
+                  src={images.allotricorder}
+                  alt='Card imagecap'
+                  style={{
+                    backgroundImage:
+                      'url(https://www.savemom.in/img/productbg.jpg)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    height: '225px',
+                  }}
+                />
+                <div className='card-body' style={{ paddingBottom: '21px' }}>
+                  <h5 className='card-title'>Allotricorder</h5>
+                  <p className='card-text'>
+                    Multi-functional health monitoring device designed as a
+                    modern world Tricoder which record basic vital signs such as
+                    Blood pressure, heart rate, ECG, blood oxygen, body
+                    temperature, Blood glucose.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='col-sm-4'>
+              <div className='card'>
+                <img
+                  className='card-img-top'
+                  src={images.fatscalekit}
+                  alt='Card imagecap'
+                  style={{
+                    backgroundImage:
+                      'url(https://www.savemom.in/img/productbg.jpg)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    width: '100%',
+                    height: '225px',
+                  }}
+                />
+                <div className='card-body' style={{ paddingBottom: '3rem' }}>
+                  <h5 className='card-title'>AlloBMI</h5>
+                  <p className='card-text'>
+                    This system provides body weight, BMI, body fat ratio, body
+                    moisture, muscle mass, basal metabolic rate, and stores the
+                    data to the cloud.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

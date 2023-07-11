@@ -46,7 +46,9 @@ const Contact = () => {
   window.addEventListener('scroll', toggleVisible);
 
   let sumbit = async () => {
-    let one = await axios({
+    if (!name || !mobile_no || !email || !message) return false;
+
+    return await axios({
       method: 'post',
       url: 'https://savemom-userform-7ddb4-default-rtdb.firebaseio.com/User.json',
       headers: { 'Content-Type': 'application/json' },
@@ -57,8 +59,8 @@ const Contact = () => {
         message: `${message}`,
       },
     })
-      .then((res) => {
-        console.log(res, 'Data Stored');
+      .then(() => {
+        // console.log(res, 'Data Stored');
         setName('');
         setMobile_no('');
         setEmail('');

@@ -50,6 +50,10 @@ import mbl_pic_12 from '../assets/mbl_pic-12.jpg';
 import mbl_pic_13 from '../assets/mbl_pic-13.jpg';
 import mbl_pic_14 from '../assets/mbl_pic-14.jpg';
 import mbl_pic_15 from '../assets/mbl_pic-15.jpg';
+import google_play from '../assets/google-play.png';
+import allowear from '../assets/allowear.png';
+import allotricorder from '../assets/allotricorder.png';
+import fatscalekit from '../assets/fatscalekit.png';
 
 export default {
   logo,
@@ -99,4 +103,8 @@ export default {
   mbl_pic_13,
   mbl_pic_14,
   mbl_pic_15,
+  google_play,
+  allowear,
+  allotricorder,
+  fatscalekit,
 };
