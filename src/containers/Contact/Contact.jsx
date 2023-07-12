@@ -147,19 +147,27 @@ const Contact = () => {
               <div className='contact'>
                 <div className='link'>
                   <BsFillTelephoneFill />
-                  <span>+91 9361513147</span>
+                  <span>
+                    <a href='tel: +91 9361513147'>+91 9361513147</a>
+                  </span>
                 </div>
                 <div className='link'>
                   <BiLogoGmail />
-                  <span>info@savemom.in</span>
+                  <span>
+                    <a href='mailto:info@savemom.in'>info@savemom.in</a>
+                  </span>
                 </div>
                 <div className='link'>
                   <GiRotaryPhone />
                   <span>Landline Numbers</span>
                 </div>
                 <ul>
-                  <li>04523500629</li>
-                  <li>04523500630</li>
+                  <li>
+                    <a href='tel: 04523500629'>04523500629</a>
+                  </li>
+                  <li>
+                    <a href='tel: 04523500630'>04523500630</a>
+                  </li>
                 </ul>
               </div>
 

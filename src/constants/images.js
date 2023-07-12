@@ -54,6 +54,8 @@ import google_play from '../assets/google-play.png';
 import allowear from '../assets/allowear.png';
 import allotricorder from '../assets/allotricorder.png';
 import fatscalekit from '../assets/fatscalekit.png';
+import admin_portal_1 from '../assets/Admin_portal-1.png';
+import doctor_portal_1 from '../assets/doctor_portal-1.png';
 
 export default {
   logo,
@@ -107,4 +109,6 @@ export default {
   allowear,
   allotricorder,
   fatscalekit,
+  admin_portal_1,
+  doctor_portal_1,
 };

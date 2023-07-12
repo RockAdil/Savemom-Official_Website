@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 import './product.scss';
-import { Navbar, MobilePics } from '../../containers';
+import { Navbar, MobilePics, Map, Contact } from '../../containers';
 import { images } from '../../constants';
 
 const Product = () => {
@@ -165,6 +165,115 @@ const Product = () => {
           </div>
         </div>
       </div>
+
+      {/* CONTENT - 4 */}
+      <div className='product__content-4'>
+        <div className='section__padding'>
+          <div className='app__wrapper'>
+            <div className='app__wrapper_img'>
+              <img src={images.admin_portal_1} alt='admin-portal-img' />
+            </div>
+            <div className='app__wrapper_info'>
+              <h3 className='sub__head-text'>Savemom Admin Portal</h3>
+              <p className='p-text'>
+                Admin can create the doctors and villages from this portal. Also
+                have an option to view complete report details of each patient
+                and their health conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CONTENT - 5 */}
+      <div className='product__content-5'>
+        <div className='section__padding'>
+          <div className='app__wrapper'>
+            <div className='app__wrapper_info'>
+              <h3 className='sub__head-text'>Savemom Doctor Portal</h3>
+              <p className='p-text'>
+                This is the AI integrated web application which separates the
+                patient datas as high risk and low risk categories. Doctors can
+                assess full patient's health details from this portal.
+              </p>
+            </div>
+            <div className='app__wrapper_img app__wrapper_img-reverse'>
+              <img src={images.doctor_portal_1} alt='admin-portal-img' />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CONTENT - 6 */}
+      <div className='product__content-6'>
+        <h3 className='sub__head-text'>Training Materials</h3>
+        <small className='head-line' />
+        <div className='product__content-6_info'>
+          <div className='box'>
+            <div className='box-content'>
+              <div className='content-2_icon'>
+                <i
+                  className='fa-regular fa-file'
+                  style={{
+                    color: '#fff',
+                    width: '10px',
+                    height: '10px',
+                    fontSize: '25px',
+                  }}
+                />
+              </div>
+              <p className='p-text'>
+                Documents for using admin and doctor portals and health worker
+                app.
+              </p>
+            </div>
+          </div>
+          <div className='box'>
+            <div className='box-content'>
+              <div className='content-2_icon'>
+                <i
+                  className='fa-brands fa-youtube'
+                  style={{
+                    color: '#fff',
+                    width: '10px',
+                    height: '10px',
+                    fontSize: '25px',
+                  }}
+                />
+              </div>
+              <p className='p-text'>
+                Documents for using admin and doctor portals and health worker
+                app.
+              </p>
+            </div>
+          </div>
+          <div className='box'>
+            <div className='box-content'>
+              <div className='content-2_icon'>
+                <i
+                  className='fa-sharp fa-regular fa-file-video'
+                  style={{
+                    color: '#fff',
+                    width: '10px',
+                    height: '10px',
+                    fontSize: '25px',
+                  }}
+                />
+              </div>
+              <p className='p-text'>
+                Documents for using admin and doctor portals and health worker
+                app.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* MAP */}
+      <Map />
+
+      {/* CONTACT */}
+      <Contact />
     </>
   );
 };
