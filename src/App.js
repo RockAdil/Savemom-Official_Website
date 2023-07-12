@@ -6,9 +6,11 @@ import {
   OurJourney,
   HowWeWork,
   Product,
+  NewsReports,
   // GetInvolved,
-  // NewsReports,
 } from './components';
+
+import { MoreNews } from './containers';
 
 import './App.scss';
 
@@ -21,8 +23,9 @@ const App = () => {
         <Route path='/ourjourney' element={<OurJourney />} />
         <Route path='/howwework' element={<HowWeWork />} />
         <Route path='/product' element={<Product />} />
-        {/* <Route path='/newsreports' element={<NewsReports />} />
-        <Route path='/getInvolved' element={<GetInvolved />} /> */}
+        <Route path='/newsreports' element={<NewsReports />} />
+        <Route path='/morenews' element={<MoreNews />} />
+        {/* <Route path='/getInvolved' element={<GetInvolved />} /> */}
       </Routes>
     </Router>
   );

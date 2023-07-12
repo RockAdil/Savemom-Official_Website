@@ -56,6 +56,23 @@ import allotricorder from '../assets/allotricorder.png';
 import fatscalekit from '../assets/fatscalekit.png';
 import admin_portal_1 from '../assets/Admin_portal-1.png';
 import doctor_portal_1 from '../assets/doctor_portal-1.png';
+// NEWS & REPORTS
+import yourstory from '../assets/yourstory.png';
+import airmakerchina from '../assets/airmakerchina.png';
+import yourstorysingapore from '../assets/yourstorysingapore.jpg';
+import code_billon from '../assets/codefornextbillion.jpg';
+import uberprogram from '../assets/uberprogram.jpg';
+import bridge from '../assets/bridge.jpg';
+import uber_exchange from '../assets/uber.png';
+import nasscom_news from '../assets/nasscom-news.jpg';
+import funding from '../assets/funding.jpg';
+import massisrael_news from '../assets/masschalange.png';
+import money_control from '../assets/moneycontrol.jpg';
+import pregnancy_device from '../assets/pregnancy device.jpg';
+import interiorvillagespregnantladies from '../assets/interiorvillagespregnantladies.jpg';
+import newinnovation from '../assets/newinnovation.jpg';
+import pregnancy_devicecheckup from '../assets/pregnancy devicecheckup.png';
+import Newinnovationhealthcare from '../assets/Newinnovationhealthcare.png';
 
 export default {
   logo,
@@ -111,4 +128,20 @@ export default {
   fatscalekit,
   admin_portal_1,
   doctor_portal_1,
+  yourstory,
+  airmakerchina,
+  yourstorysingapore,
+  code_billon,
+  uberprogram,
+  bridge,
+  uber_exchange,
+  nasscom_news,
+  funding,
+  massisrael_news,
+  money_control,
+  pregnancy_device,
+  interiorvillagespregnantladies,
+  newinnovation,
+  pregnancy_devicecheckup,
+  Newinnovationhealthcare,
 };
