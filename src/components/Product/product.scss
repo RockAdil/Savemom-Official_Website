@@ -452,6 +452,8 @@
   }
 
   .app__wrapper_info {
+    align-items: flex-end;
+    text-align: end;
     p {
       color: #00000097;
     }
