@@ -425,6 +425,12 @@
     }
   }
 
+  .app__wrapper {
+    @media screen and (max-width: 1150px) {
+      flex-direction: column-reverse;
+    }
+  }
+
   .app__wrapper_img {
     justify-content: center;
     @media screen and (max-width: 550px) {
@@ -437,10 +443,10 @@
 
       @media screen and (max-width: 1150px) {
         width: 100%;
-        padding-bottom: 2rem;
+        // padding-bottom: 2rem;
       }
       @media screen and (max-width: 550px) {
-        padding-bottom: 2rem;
+        // padding-bottom: 2rem;
       }
     }
   }
