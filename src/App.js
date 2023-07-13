@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
+
 import {
   Home,
   WhoWeAre,
@@ -10,7 +12,6 @@ import {
   GetInvolved,
   Donate,
 } from './components';
-
 import { MoreNews } from './containers';
 
 import './App.scss';
@@ -29,6 +30,7 @@ const App = () => {
         <Route path='/getInvolved' element={<GetInvolved />} />
         <Route path='/donate' element={<Donate />} />
       </Routes>
+      <Analytics />
     </Router>
   );
 };
