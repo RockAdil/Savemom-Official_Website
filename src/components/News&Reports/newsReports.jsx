@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import './newsReports.scss';
-import { Navbar, News } from '../../containers';
+import { Navbar, News, All, Map, Contact } from '../../containers';
 import { Link } from 'react-router-dom';
 // import { images } from '../../constants';
 
 const NewsReports = () => {
+  const [activeFilter, setActiveFilter] = useState('All');
+  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+  const [filterWork, setFilterWork] = useState([]);
+
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
+
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+
+      if (item === 'All' || item === 'INDIA') {
+        setFilterWork(All);
+      } else {
+        // setFilterWork(works.filter((work) => work.tags.includes(item)));
+        return setFilterWork([]);
+      }
+    }, 500);
+  };
+
+  useEffect(() => {
+    setFilterWork(All);
+  }, []);
+
   return (
     <>
       <Navbar nav_bgcolor='' nav_color='navbar-dark' />
@@ -56,6 +80,52 @@ const NewsReports = () => {
           <button className='more-btn'>More News</button>
         </Link>
       </div>
+
+      {/* CONTENT - 2 */}
+      <div className='app__content-2'>
+        <h3 className='sub__head-text'>Reports</h3>
+        <small className='head-line' />
+        <div className='app__work-filter'>
+          {[
+            'All',
+            'INDIA',
+            'SINGAPORE',
+            'REGIONAL FACTSHEETS',
+            'DIGITAL INNOVATION FACTSHEETS',
+          ].map((item, index) => (
+            <div
+              key={index}
+              onClick={() => handleWorkFilter(item)}
+              className={`app__work-filter-item app__flex work-text ${
+                activeFilter === item ? 'item-active' : ''
+              }`}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+
+        <motion.div
+          animate={animateCard}
+          transition={{ duration: 0.5, delayChildren: 0.5 }}
+          className='app__work-portfolio'
+        >
+          {filterWork.map((work, index) => (
+            <div className='app__content-2_work' key={index}>
+              <div className='app__content-2_img'>
+                <img src={work.src} alt={work.title} />
+              </div>
+              <h5>{work.title}</h5>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* MAP */}
+      <Map />
+
+      {/* CONTACT */}
+      <Contact />
     </>
   );
 };

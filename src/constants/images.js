@@ -73,6 +73,7 @@ import interiorvillagespregnantladies from '../assets/interiorvillagespregnantla
 import newinnovation from '../assets/newinnovation.jpg';
 import pregnancy_devicecheckup from '../assets/pregnancy devicecheckup.png';
 import Newinnovationhealthcare from '../assets/Newinnovationhealthcare.png';
+import pilotreportimage from '../assets/pilotreportimage.jpg';
 
 export default {
   logo,
@@ -144,4 +145,5 @@ export default {
   newinnovation,
   pregnancy_devicecheckup,
   Newinnovationhealthcare,
+  pilotreportimage,
 };

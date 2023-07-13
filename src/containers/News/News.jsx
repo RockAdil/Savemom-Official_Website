@@ -218,3 +218,10 @@ export const Five = [
     link: 'https://jiovio.com/blog/?p=1969',
   },
 ];
+
+export const All = [
+  {
+    src: `${images.pilotreportimage}`,
+    title: 'Pilot Report',
+  },
+];
