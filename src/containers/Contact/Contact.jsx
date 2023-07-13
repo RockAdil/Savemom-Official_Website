@@ -171,7 +171,9 @@ const Contact = () => {
                 </ul>
               </div>
 
-              <Button className='btn btn_custom'>Donate</Button>
+              <Link to='/donate'>
+                <Button className='btn btn_custom'>Donate Us</Button>
+              </Link>
             </div>
           </motion.div>
 

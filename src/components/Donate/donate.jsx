@@ -16,10 +16,10 @@ import { FaArrowCircleUp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
-import './getInvolved.scss';
+import './donate.scss';
 import { Navbar } from '../../containers';
 
-const GetInvolved = () => {
+const Donate = () => {
   const [name, setName] = useState('');
   const [mobile_no, setMobile_no] = useState('');
   const [organization, setOrganization] = useState('');
@@ -83,11 +83,11 @@ const GetInvolved = () => {
       <div className='getInvolved__padding'>
         <div className='getInvolved__savemom'>
           <div className='getInvolved__savemom-content section__padding'>
-            <h3 className='head-text'>Get Involved</h3>
+            <h3 className='head-text'>Donate Us</h3>
             <p className='p-text'>
-              We can end preventable maternal deaths, but we can’t do it alone.
-              Together, we can make maternal mortality a thing of the past.
-              Connect with us by filling below form.
+              If you want to contribute in our journey of avoiding preventable
+              maternal deaths, then here is the path for you. By giving the
+              donations you can save atleast one mother's life.
             </p>
           </div>
         </div>
@@ -370,4 +370,4 @@ const GetInvolved = () => {
   );
 };
 
-export default GetInvolved;
+export default Donate;

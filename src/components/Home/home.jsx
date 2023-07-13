@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 
 import { Navbar, Map, Contact } from '../../containers';
 import './home.scss';
+import { images } from '../../constants';
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -35,7 +36,7 @@ const Home = () => {
             <Carousel.Item>
               <img
                 className='d-block w-100'
-                src='https://www.savemom.in/images/banner/small/savemom.jpg'
+                src={images.savemom}
                 alt='First slide'
               />
               <Carousel.Caption className='caro-caption'>
@@ -57,7 +58,7 @@ const Home = () => {
             <Carousel.Item>
               <img
                 className='d-block w-100'
-                src='https://www.savemom.in/images/banner/preventable1.jpeg'
+                src={images.preventable1}
                 alt='Second slide'
                 target='_blank'
               />
@@ -81,7 +82,7 @@ const Home = () => {
             <Carousel.Item>
               <img
                 className='d-block w-100'
-                src='https://www.savemom.in/images/banner/savemomdeployment.jpg'
+                src={images.savemomdeployment}
                 alt='Third slide'
               />
 
@@ -104,7 +105,7 @@ const Home = () => {
             <Carousel.Item>
               <img
                 className='d-block w-100'
-                src='https://www.savemom.in/images/banner/millenniumalliance.jpg'
+                src={images.millenniumalliance}
                 alt='Fourth slide'
               />
 
@@ -118,7 +119,7 @@ const Home = () => {
             <Carousel.Item>
               <img
                 className='d-block w-100'
-                src=' https://www.savemom.in/images/banner/small/uberexchangeprogram.jpg'
+                src={images.uberexchangeprogram}
                 alt='Fifth slide'
               />
 
@@ -132,7 +133,7 @@ const Home = () => {
             <Carousel.Item>
               <img
                 className='d-block w-100'
-                src='https://www.savemom.in/images/banner/codeforbillion2.jpg'
+                src={images.codeforbillion2}
                 alt='Sixth slide'
               />
 
@@ -146,7 +147,7 @@ const Home = () => {
             <Carousel.Item>
               <img
                 className='d-block w-100'
-                src='https://www.savemom.in/images/banner/Anjani Mashelkar.jpeg'
+                src={images.Anjani_Mashelkar}
                 alt='Seventh slide'
               />
             </Carousel.Item>

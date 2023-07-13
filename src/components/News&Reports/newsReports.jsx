@@ -113,7 +113,13 @@ const NewsReports = () => {
           {filterWork.map((work, index) => (
             <div className='app__content-2_work' key={index}>
               <div className='app__content-2_img'>
-                <img src={work.src} alt={work.title} />
+                <a
+                  href='https://www.savemom.in/documents/pilotreport.pdf'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <img src={work.src} alt={work.title} />
+                </a>
               </div>
               <h5>{work.title}</h5>
             </div>

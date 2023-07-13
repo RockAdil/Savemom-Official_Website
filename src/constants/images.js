@@ -1,6 +1,15 @@
 import logo from '../assets/logo.png';
 import process from '../assets/process.png';
 
+// Home
+import savemom from '../assets/savemom.jpg';
+import preventable1 from '../assets/preventable1.jpg';
+import savemomdeployment from '../assets/savemomdeployment.jpg';
+import millenniumalliance from '../assets/millenniumalliance.jpg';
+import uberexchangeprogram from '../assets/uberexchangeprogram.jpg';
+import codeforbillion2 from '../assets/codeforbillion2.jpg';
+import Anjani_Mashelkar from '../assets/Anjani Mashelkar.jpg';
+
 import startupkarnataka from '../assets/startupkarnataka.jpg';
 import fbstartup from '../assets/fbstartup.jpg';
 import launchpad from '../assets/launchpad.jpg';
@@ -78,6 +87,13 @@ import pilotreportimage from '../assets/pilotreportimage.jpg';
 export default {
   logo,
   process,
+  savemom,
+  preventable1,
+  savemomdeployment,
+  millenniumalliance,
+  uberexchangeprogram,
+  codeforbillion2,
+  Anjani_Mashelkar,
   startupkarnataka,
   fbstartup,
   launchpad,

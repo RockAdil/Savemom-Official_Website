@@ -7,7 +7,8 @@ import {
   HowWeWork,
   Product,
   NewsReports,
-  // GetInvolved,
+  GetInvolved,
+  Donate,
 } from './components';
 
 import { MoreNews } from './containers';
@@ -25,7 +26,8 @@ const App = () => {
         <Route path='/product' element={<Product />} />
         <Route path='/newsreports' element={<NewsReports />} />
         <Route path='/morenews' element={<MoreNews />} />
-        {/* <Route path='/getInvolved' element={<GetInvolved />} /> */}
+        <Route path='/getInvolved' element={<GetInvolved />} />
+        <Route path='/donate' element={<Donate />} />
       </Routes>
     </Router>
   );
