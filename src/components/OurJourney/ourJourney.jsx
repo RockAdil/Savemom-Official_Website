@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './ourJourney.scss';
 import { images } from '../../constants';
 import { Navbar, Map, Contact } from '../../containers';
 
 const OurJourney = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
+
   return (
     <>
       <Navbar nav_bgcolor='' nav_color='navbar-dark' />

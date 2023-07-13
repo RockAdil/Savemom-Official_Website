@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 import './product.scss';
@@ -6,6 +6,13 @@ import { Navbar, MobilePics, Map, Contact } from '../../containers';
 import { images } from '../../constants';
 
 const Product = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
+
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {

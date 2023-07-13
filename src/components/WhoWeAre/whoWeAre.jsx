@@ -11,6 +11,7 @@ import {
   Awards,
   Partners,
 } from '../../containers';
+import { images } from '../../constants';
 
 const WhoWeAre = () => {
   const scrollRef = useRef(null);
@@ -30,6 +31,11 @@ const WhoWeAre = () => {
   };
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+
     const scrollInterval = setInterval(() => {
       const { current } = moveRef1;
 
@@ -73,7 +79,7 @@ const WhoWeAre = () => {
         <div className='app__wrapper'>
           <div className='app__wrapper_info'>
             <img
-              src='https://www.savemom.in/images/staticpages/keyproblem.png'
+              src={images.key_problem}
               alt='bulb'
               width='80px'
               height='80px'
@@ -90,7 +96,7 @@ const WhoWeAre = () => {
 
           <div className='app__wrapper_info'>
             <img
-              src='https://www.savemom.in/images/staticpages/missionimg.png'
+              src={images.mission}
               alt='mission'
               width='90px'
               height='80px'

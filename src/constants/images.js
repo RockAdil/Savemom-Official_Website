@@ -10,6 +10,9 @@ import uberexchangeprogram from '../assets/uberexchangeprogram.jpg';
 import codeforbillion2 from '../assets/codeforbillion2.jpg';
 import Anjani_Mashelkar from '../assets/Anjani Mashelkar.jpg';
 
+// Who We Are
+import key_problem from '../assets/keyproblem.png';
+import mission from '../assets/missionimg.png';
 import startupkarnataka from '../assets/startupkarnataka.jpg';
 import fbstartup from '../assets/fbstartup.jpg';
 import launchpad from '../assets/launchpad.jpg';
@@ -94,6 +97,8 @@ export default {
   uberexchangeprogram,
   codeforbillion2,
   Anjani_Mashelkar,
+  key_problem,
+  mission,
   startupkarnataka,
   fbstartup,
   launchpad,

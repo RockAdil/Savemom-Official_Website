@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BsFacebook,
   BsLinkedin,
@@ -28,6 +28,14 @@ const Donate = () => {
   const [message, setMessage] = useState('');
 
   const [visible, setVisible] = useState(false);
+  const [formError, setFormError] = useState('');
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -47,34 +55,46 @@ const Donate = () => {
 
   window.addEventListener('scroll', toggleVisible);
 
-  let sumbit = async () => {
-    if (!name || !mobile_no || !email || !message) return false;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    return await axios({
-      method: 'post',
-      url: 'https://savemom-userform-7ddb4-default-rtdb.firebaseio.com/Get_Involved.json',
-      headers: { 'Content-Type': 'application/json' },
-      data: {
-        name: `${name}`,
-        mobile_number: `${mobile_no}`,
-        organization: `${organization}`,
-        email: `${email}`,
-        jobtitle: `${jobtitle}`,
-        message: `${message}`,
-      },
-    })
-      .then(() => {
-        // console.log(res, 'Data Stored');
-        setName('');
-        setMobile_no('');
-        setOrganization('');
-        setEmail('');
-        setJobtitle('');
-        setMessage('');
-      })
-      .catch((err) => {
-        console.log(err, 'Something Error!!');
-      });
+    if (
+      !name ||
+      !mobile_no ||
+      !organization ||
+      !email ||
+      !jobtitle ||
+      !message
+    ) {
+      setFormError('Please fill in all fields.');
+      return;
+    }
+
+    try {
+      await axios.post(
+        'https://savemom-userform-7ddb4-default-rtdb.firebaseio.com/Donate.json',
+        {
+          name: name,
+          mobile_number: mobile_no,
+          organization: organization,
+          email: email,
+          jobtitle: jobtitle,
+          message: message,
+        }
+      );
+
+      // Reset form fields
+      setName('');
+      setMobile_no('');
+      setOrganization('');
+      setEmail('');
+      setJobtitle('');
+      setMessage('');
+      setFormError('');
+    } catch (error) {
+      console.log(error);
+      setFormError('Something went wrong. Please try again later.');
+    }
   };
 
   return (
@@ -102,13 +122,10 @@ const Donate = () => {
 
         <div className='getInvolved__content'>
           <Container>
-            <Form>
+            <Form onSubmit={handleSubmit}>
               <Row>
                 <Col sm={6}>
-                  <Form.Group
-                    className='mb-4 mb-sm-5'
-                    controlId='exampleForm.ControlTextarea1'
-                  >
+                  <Form.Group className='mb-4 mb-sm-5' controlId='nameInput'>
                     <Form.Label>Name</Form.Label>
                     <Form.Control
                       type='text'
@@ -123,7 +140,7 @@ const Donate = () => {
                 <Col>
                   <Form.Group
                     className='mb-4 mb-sm-5'
-                    controlId='exampleForm.ControlInput1'
+                    controlId='mobileNoInput'
                   >
                     <Form.Label>Mobile No</Form.Label>
                     <Form.Control
@@ -141,7 +158,7 @@ const Donate = () => {
                 <Col sm={6}>
                   <Form.Group
                     className='mb-4 mb-sm-5'
-                    controlId='exampleForm.ControlInput1'
+                    controlId='organizationInput'
                   >
                     <Form.Label>Organization</Form.Label>
                     <Form.Control
@@ -155,10 +172,7 @@ const Donate = () => {
                 </Col>
 
                 <Col sm={6}>
-                  <Form.Group
-                    className='mb-4 mb-sm-5'
-                    controlId='exampleForm.ControlInput1'
-                  >
+                  <Form.Group className='mb-4 mb-sm-5' controlId='emailInput'>
                     <Form.Label>Email address</Form.Label>
                     <Form.Control
                       type='email'
@@ -175,7 +189,7 @@ const Donate = () => {
                 <Col sm={6}>
                   <Form.Group
                     className='mb-4 mb-sm-5'
-                    controlId='exampleForm.ControlInput1'
+                    controlId='jobTitleInput'
                   >
                     <Form.Label>Job Title</Form.Label>
                     <Form.Control
@@ -189,10 +203,7 @@ const Donate = () => {
                 </Col>
 
                 <Col>
-                  <Form.Group
-                    className='mb-4 mb-sm-5'
-                    controlId='exampleForm.ControlTextarea1'
-                  >
+                  <Form.Group className='mb-4 mb-sm-5' controlId='messageInput'>
                     <Form.Label>Message</Form.Label>
                     <Form.Control
                       as='textarea'
@@ -204,12 +215,10 @@ const Donate = () => {
                   </Form.Group>
                 </Col>
               </Row>
-              <Button
-                className='btn btn_custom'
-                onClick={() => {
-                  sumbit();
-                }}
-              >
+
+              {formError && <p className='text-danger'>{formError}</p>}
+
+              <Button className='btn btn_custom' type='submit'>
                 Send Message
               </Button>
             </Form>

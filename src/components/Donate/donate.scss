@@ -130,7 +130,10 @@
     padding: 3rem 2rem;
   }
   @media screen and (max-width: 550px) {
-    padding: 2rem;
+    padding: 0 1rem 2rem;
+  }
+  @media screen and (max-width: 380px) {
+    padding: 2rem 1rem;
   }
 
   .getInvolved__head {

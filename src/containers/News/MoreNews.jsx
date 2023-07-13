@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Contact, Five, Four, Map, Navbar, One, Three, Two } from '../index';
 import './MoreNews.scss';
 
 const MoreNews = () => {
   const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 300,
+      behavior: 'smooth',
+    });
+  }, [currentPage]);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
+
   const itemsPerPage = 5;
 
   const allItems = [...One, ...Two, ...Three, ...Four, ...Five];
