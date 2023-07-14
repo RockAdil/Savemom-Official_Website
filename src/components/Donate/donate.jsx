@@ -363,7 +363,7 @@ const Donate = () => {
 
       <div className='footer'>
         <small>
-          Copyright © 2018 Jiovio Healthcare <br /> © Content Owned And
+          Copyright © 2023 Jiovio Healthcare <br /> © Content Owned And
           Maintained By Jiovio Healthcare, Developed And Hosted By{' '}
           <a
             href='https://adilahamed.vercel.app'
