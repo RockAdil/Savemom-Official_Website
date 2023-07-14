@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -10,6 +10,13 @@ import { images } from '../../constants';
 
 const Home = () => {
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);

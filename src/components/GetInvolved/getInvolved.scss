@@ -338,6 +338,13 @@
   padding: 1rem 0;
   text-align: center;
 
+  @media screen and (max-width: 550px) {
+    padding: 1rem 1.5rem;
+  }
+  @media screen and (max-width: 550px) {
+    padding: 1rem;
+  }
+
   small {
     font-size: 13px;
     color: gray;
