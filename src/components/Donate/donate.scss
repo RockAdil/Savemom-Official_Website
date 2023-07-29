@@ -372,15 +372,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 1.5rem;
   box-shadow: -5px 5px 20px 5px #8888;
 
   @media screen and (max-width: 550px) {
     // height: 30vh;
-    padding-top: 0;
+    padding: 0;
   }
   @media screen and (max-width: 380px) {
     height: 30vh;
-    padding-top: 0;
+    padding: 1rem 0;
   }
 
   svg {
@@ -388,6 +389,9 @@
     color: green;
     margin-bottom: 2rem;
 
+    @media screen and (max-width: 450px) {
+      font-size: 3rem;
+    }
     @media screen and (max-width: 380px) {
       font-size: 5rem;
     }
@@ -400,11 +404,14 @@
       font-size: 1.4rem;
       padding: 0 1rem;
     }
+    @media screen and (max-width: 380px) {
+      font-size: 1.3rem;
+    }
 
     &:first-child {
       @media screen and (max-width: 380px) {
         width: 100%;
-        font-size: 5rem;
+        font-size: 1rem;
         padding: 0;
         margin: 0;
         line-height: 1.5rem;
