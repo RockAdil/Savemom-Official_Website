@@ -313,6 +313,7 @@ import { GiRotaryPhone } from 'react-icons/gi';
 import { Button, Container, Row, Col, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaArrowCircleUp } from 'react-icons/fa';
+import { HiOutlineDocumentCheck } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
@@ -327,6 +328,7 @@ const Contact = () => {
 
   const [visible, setVisible] = useState(false);
   const [formError, setFormError] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -366,6 +368,7 @@ const Contact = () => {
       );
 
       // Reset form fields
+      setIsSubmitted(true);
       setName('');
       setMobile_no('');
       setEmail('');
@@ -487,93 +490,101 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             className='app__header-info'
           >
-            <div className='app__wrapper_contact'>
-              <h4>Contact Form</h4>
-              <Container>
-                <Form onSubmit={handleSubmit}>
-                  <Row>
-                    <Col sm={6}>
-                      <Form.Group
-                        className='mb-4 mb-sm-5'
-                        controlId='nameInput'
+            {!isSubmitted ? (
+              <div className='app__wrapper_contact'>
+                <h4>Contact Form</h4>
+                <Container>
+                  <Form onSubmit={handleSubmit}>
+                    <Row>
+                      <Col sm={6}>
+                        <Form.Group
+                          className='mb-4 mb-sm-5'
+                          controlId='nameInput'
+                        >
+                          <Form.Label>Name</Form.Label>
+                          <Form.Control
+                            type='text'
+                            placeholder='Enter name'
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                          />
+                        </Form.Group>
+                      </Col>
+
+                      <Col>
+                        <Form.Group
+                          className='mb-4 mb-sm-5'
+                          controlId='mobileNoInput'
+                        >
+                          <Form.Label>Mobile No</Form.Label>
+                          <Form.Control
+                            type='number'
+                            placeholder='Enter number'
+                            value={mobile_no}
+                            onChange={(e) => setMobile_no(e.target.value)}
+                            required
+                          />
+                        </Form.Group>
+                      </Col>
+                    </Row>
+
+                    <Row>
+                      <Col sm={6}>
+                        <Form.Group
+                          className='mb-4 mb-sm-5'
+                          controlId='emailInput'
+                        >
+                          <Form.Label>Email address</Form.Label>
+                          <Form.Control
+                            type='email'
+                            placeholder='name@example.com'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                          />
+                        </Form.Group>
+                      </Col>
+
+                      <Col>
+                        <Form.Group
+                          className='mb-4 mb-sm-5'
+                          controlId='messageInput'
+                        >
+                          <Form.Label>Message</Form.Label>
+                          <Form.Control
+                            as='textarea'
+                            rows={3}
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            required
+                          />
+                        </Form.Group>
+                      </Col>
+                    </Row>
+
+                    {formError && (
+                      <p
+                        className='text-danger'
+                        style={{ color: 'red', display: 'flex' }}
                       >
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control
-                          type='text'
-                          placeholder='Enter name'
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                          required
-                        />
-                      </Form.Group>
-                    </Col>
+                        {formError}
+                      </p>
+                    )}
 
-                    <Col>
-                      <Form.Group
-                        className='mb-4 mb-sm-5'
-                        controlId='mobileNoInput'
-                      >
-                        <Form.Label>Mobile No</Form.Label>
-                        <Form.Control
-                          type='number'
-                          placeholder='Enter number'
-                          value={mobile_no}
-                          onChange={(e) => setMobile_no(e.target.value)}
-                          required
-                        />
-                      </Form.Group>
-                    </Col>
-                  </Row>
-
-                  <Row>
-                    <Col sm={6}>
-                      <Form.Group
-                        className='mb-4 mb-sm-5'
-                        controlId='emailInput'
-                      >
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control
-                          type='email'
-                          placeholder='name@example.com'
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          required
-                        />
-                      </Form.Group>
-                    </Col>
-
-                    <Col>
-                      <Form.Group
-                        className='mb-4 mb-sm-5'
-                        controlId='messageInput'
-                      >
-                        <Form.Label>Message</Form.Label>
-                        <Form.Control
-                          as='textarea'
-                          rows={3}
-                          value={message}
-                          onChange={(e) => setMessage(e.target.value)}
-                          required
-                        />
-                      </Form.Group>
-                    </Col>
-                  </Row>
-
-                  {formError && (
-                    <p
-                      className='text-danger'
-                      style={{ color: 'red', display: 'flex' }}
-                    >
-                      {formError}
-                    </p>
-                  )}
-
-                  <Button className='btn btn_custom' type='submit'>
-                    Send Message
-                  </Button>
-                </Form>
-              </Container>
-            </div>
+                    <Button className='btn btn_custom' type='submit'>
+                      Send Message
+                    </Button>
+                  </Form>
+                </Container>
+              </div>
+            ) : (
+              <div className='form__after-submit'>
+                <HiOutlineDocumentCheck />
+                <h4>Thank You</h4>
+                <h4>Your form has been submitted.</h4>
+              </div>
+            )}
           </motion.div>
         </div>
       </div>

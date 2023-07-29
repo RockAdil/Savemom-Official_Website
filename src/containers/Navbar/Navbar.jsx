@@ -5,6 +5,13 @@ import { Link } from 'react-router-dom';
 import './navbar.scss';
 
 const Navbar = ({ nav_bgcolor = 'bg-light', nav_color = 'navbar-light' }) => {
+  const scroll = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <nav
       className={`navbar navbar-expand-lg ${nav_color} ${nav_bgcolor} fixed-top`}
@@ -18,9 +25,10 @@ const Navbar = ({ nav_bgcolor = 'bg-light', nav_color = 'navbar-light' }) => {
             height='40'
             style={{ marginRight: '1rem' }}
             className='d-inline-block align-center'
-            alt=''
+            alt='logo'
+            onClick={scroll}
           />
-          Savemom
+          <span onClick={scroll}>Savemom</span>
         </Link>
         <button
           className='navbar-toggler'
@@ -41,7 +49,7 @@ const Navbar = ({ nav_bgcolor = 'bg-light', nav_color = 'navbar-light' }) => {
         >
           <ul className='navbar-nav active'>
             <li className='nav-item'>
-              <Link to='/whoweare' className='nav-link'>
+              <Link to='/whoweare' className='nav-link' onClick={scroll}>
                 Who We Are
               </Link>
             </li>
@@ -57,26 +65,34 @@ const Navbar = ({ nav_bgcolor = 'bg-light', nav_color = 'navbar-light' }) => {
                 className='dropdown-menu'
                 aria-labelledby='navbarDropdownMenuLink'
               >
-                <Link to='/ourjourney' className='dropdown-item'>
+                <Link
+                  to='/ourjourney'
+                  className='dropdown-item'
+                  onClick={scroll}
+                >
                   Our Journey
                 </Link>
-                <Link to='/howwework' className='dropdown-item'>
+                <Link
+                  to='/howwework'
+                  className='dropdown-item'
+                  onClick={scroll}
+                >
                   How We Work
                 </Link>
               </div>
             </li>
             <li className='nav-item'>
-              <Link to='/product' className='nav-link'>
+              <Link to='/product' className='nav-link' onClick={scroll}>
                 Product
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/newsreports' className='nav-link'>
+              <Link to='/newsreports' className='nav-link' onClick={scroll}>
                 News & Reports
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/getinvolved' className='nav-link'>
+              <Link to='/getinvolved' className='nav-link' onClick={scroll}>
                 Get Involved
               </Link>
             </li>

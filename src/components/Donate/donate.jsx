@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import { Row, Col, Form } from 'react-bootstrap';
 import { Button, Container } from 'react-bootstrap';
 import { FaArrowCircleUp } from 'react-icons/fa';
+import { HiOutlineDocumentCheck } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
@@ -22,13 +23,22 @@ import { Navbar } from '../../containers';
 const Donate = () => {
   const [name, setName] = useState('');
   const [mobile_no, setMobile_no] = useState('');
-  const [organization, setOrganization] = useState('');
+  const [donation, setDonation] = useState('');
   const [email, setEmail] = useState('');
-  const [jobtitle, setJobtitle] = useState('');
-  const [message, setMessage] = useState('');
+  const [state, setState] = useState('');
+  const [address, setAddress] = useState('');
+  const [zipcode, setZipCode] = useState('');
 
   const [visible, setVisible] = useState(false);
   const [formError, setFormError] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const scroll = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   useEffect(() => {
     window.scrollTo({
@@ -61,10 +71,11 @@ const Donate = () => {
     if (
       !name ||
       !mobile_no ||
-      !organization ||
+      !donation ||
       !email ||
-      !jobtitle ||
-      !message
+      !state ||
+      !address ||
+      !zipcode
     ) {
       setFormError('Please fill in all fields.');
       return;
@@ -76,21 +87,24 @@ const Donate = () => {
         {
           name: name,
           mobile_number: mobile_no,
-          organization: organization,
+          donation: donation,
           email: email,
-          jobtitle: jobtitle,
-          message: message,
+          state: state,
+          address: address,
+          zipcode: zipcode,
         }
       );
 
       // Reset form fields
       setName('');
       setMobile_no('');
-      setOrganization('');
+      setDonation('');
       setEmail('');
-      setJobtitle('');
-      setMessage('');
+      setState('');
+      setAddress('');
+      setZipCode('');
       setFormError('');
+      setIsSubmitted(true);
     } catch (error) {
       console.log(error);
       setFormError('Something went wrong. Please try again later.');
@@ -121,108 +135,137 @@ const Donate = () => {
         </div>
 
         <div className='getInvolved__content'>
-          <Container>
-            <Form onSubmit={handleSubmit}>
-              <Row>
-                <Col sm={6}>
-                  <Form.Group className='mb-4 mb-sm-5' controlId='nameInput'>
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control
-                      type='text'
-                      placeholder='Enter name'
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
+          {!isSubmitted ? (
+            <Container>
+              <Form onSubmit={handleSubmit}>
+                <Row>
+                  <Col sm={6}>
+                    <Form.Group className='mb-4 mb-sm-5' controlId='nameInput'>
+                      <Form.Label>Name</Form.Label>
+                      <Form.Control
+                        type='text'
+                        placeholder='Enter name'
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
 
-                <Col>
-                  <Form.Group
-                    className='mb-4 mb-sm-5'
-                    controlId='mobileNoInput'
-                  >
-                    <Form.Label>Mobile No</Form.Label>
-                    <Form.Control
-                      type='number'
-                      placeholder='Enter number'
-                      value={mobile_no}
-                      onChange={(e) => setMobile_no(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
-              </Row>
+                  <Col>
+                    <Form.Group
+                      className='mb-4 mb-sm-5'
+                      controlId='mobileNoInput'
+                    >
+                      <Form.Label>Mobile No</Form.Label>
+                      <Form.Control
+                        type='number'
+                        placeholder='Enter number'
+                        value={mobile_no}
+                        onChange={(e) => setMobile_no(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
 
-              <Row>
-                <Col sm={6}>
-                  <Form.Group
-                    className='mb-4 mb-sm-5'
-                    controlId='organizationInput'
-                  >
-                    <Form.Label>Organization</Form.Label>
-                    <Form.Control
-                      type='text'
-                      placeholder='Enter organization'
-                      value={organization}
-                      onChange={(e) => setOrganization(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
+                <Row>
+                  <Col sm={6}>
+                    <Form.Group
+                      className='mb-4 mb-sm-5'
+                      controlId='organizationInput'
+                    >
+                      <Form.Label>Donation Amount</Form.Label>
+                      <Form.Control
+                        type='text'
+                        placeholder='Donation Amount'
+                        value={donation}
+                        onChange={(e) => setDonation(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
 
-                <Col sm={6}>
-                  <Form.Group className='mb-4 mb-sm-5' controlId='emailInput'>
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control
-                      type='email'
-                      placeholder='name@example.com'
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
-              </Row>
+                  <Col sm={6}>
+                    <Form.Group className='mb-4 mb-sm-5' controlId='emailInput'>
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control
+                        type='email'
+                        placeholder='name@example.com'
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
 
-              <Row>
-                <Col sm={6}>
-                  <Form.Group
-                    className='mb-4 mb-sm-5'
-                    controlId='jobTitleInput'
-                  >
-                    <Form.Label>Job Title</Form.Label>
-                    <Form.Control
-                      type='text'
-                      placeholder='Enter job title'
-                      value={jobtitle}
-                      onChange={(e) => setJobtitle(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
+                <Row>
+                  <Col>
+                    <Form.Group
+                      className='mb-4 mb-sm-5'
+                      controlId='messageInput'
+                    >
+                      <Form.Label>Address</Form.Label>
+                      <Form.Control
+                        as='textarea'
+                        rows={3}
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
 
-                <Col>
-                  <Form.Group className='mb-4 mb-sm-5' controlId='messageInput'>
-                    <Form.Label>Message</Form.Label>
-                    <Form.Control
-                      as='textarea'
-                      rows={3}
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
-              </Row>
+                  <Col sm={6}>
+                    <Form.Group
+                      className='mb-4 mb-sm-5'
+                      controlId='jobTitleInput'
+                    >
+                      <Form.Label>State</Form.Label>
+                      <Form.Control
+                        type='text'
+                        placeholder='Enter state'
+                        value={state}
+                        onChange={(e) => setState(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
 
-              {formError && <p className='text-danger'>{formError}</p>}
+                <Row>
+                  <Col sm={6}>
+                    <Form.Group
+                      className='mb-4 mb-sm-5'
+                      controlId='messageInput'
+                    >
+                      <Form.Label>Zip Code</Form.Label>
+                      <Form.Control
+                        type='text'
+                        placeholder='Enter zip code'
+                        value={zipcode}
+                        onChange={(e) => setZipCode(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
 
-              <Button className='btn btn_custom' type='submit'>
-                Send Message
-              </Button>
-            </Form>
-          </Container>
+                {formError && <p className='text-danger'>{formError}</p>}
+
+                <Button className='btn btn_custom' type='submit'>
+                  Send Message
+                </Button>
+              </Form>
+            </Container>
+          ) : (
+            <div className='form__after-submit'>
+              <HiOutlineDocumentCheck />
+              <h4>Thank You</h4>
+              <h4>Your form has been submitted.</h4>
+            </div>
+          )}
         </div>
       </div>
 
@@ -326,7 +369,9 @@ const Donate = () => {
               </div>
 
               <Link to='/donate'>
-                <Button className='btn btn_custom'>Donate Us</Button>
+                <Button className='btn btn_custom' onClick={scroll}>
+                  Donate Us
+                </Button>
               </Link>
             </div>
           </motion.div>

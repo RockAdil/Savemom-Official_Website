@@ -154,7 +154,7 @@ const WhoWeAre = () => {
               <h3 className='sub__head-text'>No more Malnutrition</h3>
               <p className='p-text'>
                 Nutrition elements can be provided by Savemom team partnering
-                with NGO's. So, no Malnutrition anymore
+                with NGO's. So, no Malnutrition anymore.
               </p>
             </div>
 

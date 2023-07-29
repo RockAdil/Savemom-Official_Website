@@ -46,13 +46,17 @@
     }
 
     @media screen and (max-width: 450px) {
-      top: 7%;
+      top: 3%;
+      height: 25vh;
+    }
+    @media screen and (max-width: 380px) {
+      top: 5%;
       height: 25vh;
     }
   }
 
   .whoweare__about-content {
-    margin: 5rem 4rem;
+    margin: 5rem 0;
     width: 60%;
 
     @media screen and (max-width: 1150px) {

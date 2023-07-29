@@ -95,7 +95,7 @@ const Product = () => {
         <div className='product__content-3_info'>
           {/* CARDs */}
           <div className='row'>
-            <div className='col-sm-4'>
+            <div className='col-lg-4'>
               <div className='card'>
                 <img
                   className='card-img-top'
@@ -119,7 +119,7 @@ const Product = () => {
                 </div>
               </div>
             </div>
-            <div className='col-sm-4'>
+            <div className='col-lg-4'>
               <div className='card'>
                 <img
                   className='card-img-top'
@@ -144,7 +144,7 @@ const Product = () => {
                 </div>
               </div>
             </div>
-            <div className='col-sm-4'>
+            <div className='col-lg-4'>
               <div className='card'>
                 <img
                   className='card-img-top'

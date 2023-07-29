@@ -45,13 +45,18 @@
     }
 
     @media screen and (max-width: 450px) {
-      top: 7%;
+      top: 3%;
+      height: 25vh;
+    }
+
+    @media screen and (max-width: 380px) {
+      top: 5%;
       height: 25vh;
     }
   }
 
   .ourjourney__journey-content {
-    margin: 5rem 4rem;
+    margin: 5rem 0;
     width: 60%;
 
     @media screen and (max-width: 1150px) {
@@ -113,12 +118,18 @@
 .ourjourney__content-1 {
   padding: 3rem 0;
 
+  @media screen and (max-width: 550px) {
+    padding: 0;
+  }
+
   .timeline {
     position: relative;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 
     @media screen and (max-width: 600px) {
+      // max-width: au;
+
       /* Make sure that all arrows are pointing leftwards */
       .container::before {
         left: 61px;
@@ -248,6 +259,12 @@
       @media screen and (max-width: 600px) {
         font-size: 1.3rem;
       }
+      @media screen and (max-width: 550px) {
+        font-size: 1.2rem;
+      }
+      @media screen and (max-width: 380px) {
+        font-size: 1.1rem;
+      }
     }
 
     p {
@@ -255,6 +272,9 @@
 
       @media screen and (max-width: 600px) {
         font-size: 14px;
+      }
+      @media screen and (max-width: 380px) {
+        font-size: 13px;
       }
     }
   }

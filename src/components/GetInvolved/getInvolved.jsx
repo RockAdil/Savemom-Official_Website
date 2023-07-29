@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import { Row, Col, Form } from 'react-bootstrap';
 import { Button, Container } from 'react-bootstrap';
 import { FaArrowCircleUp } from 'react-icons/fa';
+import { HiOutlineDocumentCheck } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
@@ -29,6 +30,7 @@ const GetInvolved = () => {
 
   const [visible, setVisible] = useState(false);
   const [formError, setFormError] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     window.scrollTo({
@@ -91,6 +93,7 @@ const GetInvolved = () => {
       setJobtitle('');
       setMessage('');
       setFormError('');
+      setIsSubmitted(true);
     } catch (error) {
       console.log(error);
       setFormError('Something went wrong. Please try again later.');
@@ -121,108 +124,119 @@ const GetInvolved = () => {
         </div>
 
         <div className='getInvolved__content'>
-          <Container>
-            <Form onSubmit={handleSubmit}>
-              <Row>
-                <Col sm={6}>
-                  <Form.Group className='mb-4 mb-sm-5' controlId='nameInput'>
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control
-                      type='text'
-                      placeholder='Enter name'
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
+          {!isSubmitted ? (
+            <Container>
+              <Form onSubmit={handleSubmit}>
+                <Row>
+                  <Col sm={6}>
+                    <Form.Group className='mb-4 mb-sm-5' controlId='nameInput'>
+                      <Form.Label>Name</Form.Label>
+                      <Form.Control
+                        type='text'
+                        placeholder='Enter name'
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
 
-                <Col>
-                  <Form.Group
-                    className='mb-4 mb-sm-5'
-                    controlId='mobileNoInput'
-                  >
-                    <Form.Label>Mobile No</Form.Label>
-                    <Form.Control
-                      type='number'
-                      placeholder='Enter number'
-                      value={mobile_no}
-                      onChange={(e) => setMobile_no(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
-              </Row>
+                  <Col>
+                    <Form.Group
+                      className='mb-4 mb-sm-5'
+                      controlId='mobileNoInput'
+                    >
+                      <Form.Label>Mobile No</Form.Label>
+                      <Form.Control
+                        type='number'
+                        placeholder='Enter number'
+                        value={mobile_no}
+                        onChange={(e) => setMobile_no(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
 
-              <Row>
-                <Col sm={6}>
-                  <Form.Group
-                    className='mb-4 mb-sm-5'
-                    controlId='organizationInput'
-                  >
-                    <Form.Label>Organization</Form.Label>
-                    <Form.Control
-                      type='text'
-                      placeholder='Enter organization'
-                      value={organization}
-                      onChange={(e) => setOrganization(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
+                <Row>
+                  <Col sm={6}>
+                    <Form.Group
+                      className='mb-4 mb-sm-5'
+                      controlId='organizationInput'
+                    >
+                      <Form.Label>Organization</Form.Label>
+                      <Form.Control
+                        type='text'
+                        placeholder='Enter organization'
+                        value={organization}
+                        onChange={(e) => setOrganization(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
 
-                <Col sm={6}>
-                  <Form.Group className='mb-4 mb-sm-5' controlId='emailInput'>
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control
-                      type='email'
-                      placeholder='name@example.com'
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
-              </Row>
+                  <Col sm={6}>
+                    <Form.Group className='mb-4 mb-sm-5' controlId='emailInput'>
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control
+                        type='email'
+                        placeholder='name@example.com'
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
 
-              <Row>
-                <Col sm={6}>
-                  <Form.Group
-                    className='mb-4 mb-sm-5'
-                    controlId='jobTitleInput'
-                  >
-                    <Form.Label>Job Title</Form.Label>
-                    <Form.Control
-                      type='text'
-                      placeholder='Enter job title'
-                      value={jobtitle}
-                      onChange={(e) => setJobtitle(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
+                <Row>
+                  <Col sm={6}>
+                    <Form.Group
+                      className='mb-4 mb-sm-5'
+                      controlId='jobTitleInput'
+                    >
+                      <Form.Label>Job Title</Form.Label>
+                      <Form.Control
+                        type='text'
+                        placeholder='Enter job title'
+                        value={jobtitle}
+                        onChange={(e) => setJobtitle(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
 
-                <Col>
-                  <Form.Group className='mb-4 mb-sm-5' controlId='messageInput'>
-                    <Form.Label>Message</Form.Label>
-                    <Form.Control
-                      as='textarea'
-                      rows={3}
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      required
-                    />
-                  </Form.Group>
-                </Col>
-              </Row>
+                  <Col>
+                    <Form.Group
+                      className='mb-4 mb-sm-5'
+                      controlId='messageInput'
+                    >
+                      <Form.Label>Message</Form.Label>
+                      <Form.Control
+                        as='textarea'
+                        rows={3}
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
 
-              {formError && <p className='text-danger'>{formError}</p>}
+                {formError && <p className='text-danger'>{formError}</p>}
 
-              <Button className='btn btn_custom' type='submit'>
-                Send Message
-              </Button>
-            </Form>
-          </Container>
+                <Button className='btn btn_custom' type='submit'>
+                  Send Message
+                </Button>
+              </Form>
+            </Container>
+          ) : (
+            <div className='form__after-submit'>
+              <HiOutlineDocumentCheck />
+              <h4>Thank You</h4>
+              <h4>Your form has been submitted.</h4>
+            </div>
+          )}
         </div>
       </div>
 

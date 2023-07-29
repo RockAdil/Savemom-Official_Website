@@ -46,13 +46,17 @@
     }
 
     @media screen and (max-width: 450px) {
+      top: 3%;
+      height: 25vh;
+    }
+    @media screen and (max-width: 380px) {
       top: 7%;
       height: 25vh;
     }
   }
 
   .news__savemom-content {
-    margin: 5rem 4rem;
+    margin: 5rem 0;
     width: 60%;
 
     @media screen and (max-width: 1150px) {
@@ -100,6 +104,8 @@
   }
 
   h3 {
+    margin-bottom: 0;
+
     @media screen and (max-width: 800px) {
       font-size: 2.3rem;
     }
@@ -279,7 +285,8 @@
     .app__work-filter-item {
       padding: 0.4rem 1rem;
       border-radius: 0.5rem;
-      background-color: #f1ecec97;
+      // background-color: #f1ecec97;
+      border: 1px solid #00877c;
       color: #000;
       font-weight: 700;
       transition: all 0.3s ease;

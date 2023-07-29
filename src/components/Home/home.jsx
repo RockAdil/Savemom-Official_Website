@@ -132,7 +132,7 @@ const Home = () => {
 
               <Carousel.Caption className='caro-caption'>
                 <h3 className='head-text'>
-                  WINNER OF UBEREXCHANGE PROGRAM - SAVEMOM
+                  WINNER OF UBER EXCHANGE PROGRAM - SAVEMOM
                 </h3>
               </Carousel.Caption>
             </Carousel.Item>
@@ -146,7 +146,7 @@ const Home = () => {
 
               <Carousel.Caption className='caro-caption'>
                 <h3 className='head-text'>
-                  WINNER OF CODEFORTHENEXTBILLION - SAVEMOM
+                  WINNER OF CODE FOR THE NEXT BILLION - SAVEMOM
                 </h3>
               </Carousel.Caption>
             </Carousel.Item>
