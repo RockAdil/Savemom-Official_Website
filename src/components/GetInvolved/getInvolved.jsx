@@ -74,7 +74,7 @@ const GetInvolved = () => {
 
     try {
       await axios.post(
-        'https://savemom-fb568-default-rtdb.firebaseio.com/Get_Involved.json',
+        'https://savemom-reactnative-db-default-rtdb.firebaseio.com/Get_Involved.json',
         {
           name: name,
           mobile_number: mobile_no,

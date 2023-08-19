@@ -358,7 +358,7 @@ const Contact = () => {
 
     try {
       await axios.post(
-        'https://savemom-fb568-default-rtdb.firebaseio.com/User.json',
+        'https://savemom-reactnative-db-default-rtdb.firebaseio.com/User.json',
         {
           name: name,
           mobile_number: mobile_no,
