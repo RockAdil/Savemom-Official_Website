@@ -2,28 +2,30 @@ import { images } from '../../constants';
 
 export const News = [
   {
-    src: `${images.yourstory}`,
+    src: `${images.senthil_img}`,
     tag: 'YourStory',
-    title: 'IoTranic to save moms-to-be with its smart watch',
+    title:
+      'THESE TECH SOLUTIONS ARE SAVING LIVES OF PREGNANT WOMEN AND NEWBORNS IN RURAL INDIA',
     description:
-      'SaveMom - which tracks the heart rate and sleep patterns of pregnant w...',
-    link: 'https://yourstory.com/2016/07/iotranic',
+      'Senthil Kumar is the founder of JioVio Healthcare that has developed SaveMom, a range of devices...',
+    link: 'https://yourstory.com/socialstory/2023/05/tech-solutions-saving-lives-pregnant-women-newborns',
   },
   {
-    src: `${images.airmakerchina}`,
-    tag: 'AirMaker in China',
-    title: '',
+    src: `${images.award_moment}`,
+    tag: 'YourStory',
+    title:
+      'DOZEE AND SAVEMOM WIN ANJANI MASHELKAR INCLUSIVE INNOVATION AWARDS 2020',
     description:
-      'The contest theme is "Passion Longhua Chong Qing Dream" by the Communi...',
-    link: 'https://mp.weixin.qq.com/s?__biz=MzAxMTUyNTM5NA==&mid=2649744687&idx=1&sn=5126affe71aa74ddb56d6d344e31b787&chksm=83a48952b4d300444e8437e80bc2e0ca533553a6171e8d9ae4435cd36f4a84c97b74dc7a5721&mpshare=1&scene=1&srcid=1012SsymvG5ZRIW0o9x43Gju&from=groupmessage&isappinstalled=0#wechat_redirect',
+      'The Anjani Mashelkar Foundation has been pioneering an Inclusive Innovation movement in India for 10 years...',
+    link: 'https://yourstory.com/2020/11/dozee-savemom-win-anjani-mashelkar-inclusive-innovation-award',
   },
   {
-    src: `${images.yourstorysingapore}`,
+    src: `${images.news_product}`,
     tag: 'YourStory',
-    title: 'Meet experts from Singapore-based AIRmaker who can...',
+    title: 'மலைவாழ் கர்ப்பிணி பெண்களுக்காக உருவாக்கப்பட்ட "சேவ் மாம்" செயலி',
     description:
-      'India’s thriving startup community has produced some amazing innovat...',
-    link: 'https://yourstory.com/2018/02/meet-experts-from-singapore-based-airmaker',
+      'மலைவாழ் பகுதியில் வசிக்கும் கர்ப்பிணிகளுக்காக வடிவமைக்கப்பட்ட பிரத்தியேக செயலியை...',
+    link: 'https://www.bbc.com/tamil/science-62974896',
   },
 ];
 
@@ -216,6 +218,61 @@ export const Five = [
     description:
       'We would like to thank the BIRAC seed funding scheme for putting out such great efforts towards providing budding entrepreneurs and startups a platform to grow their reach. We are overwhelmed to recei...',
     link: 'https://jiovio.com/blog/?p=1969',
+  },
+  {
+    src: `${images.senthil_img}`,
+    tag: 'YourStory',
+    title:
+      'THESE TECH SOLUTIONS ARE SAVING LIVES OF PREGNANT WOMEN AND NEWBORNS IN RURAL INDIA',
+    description:
+      'Senthil Kumar is the founder of JioVio Healthcare that has developed SaveMom, a range of devices...',
+    link: 'https://yourstory.com/socialstory/2023/05/tech-solutions-saving-lives-pregnant-women-newborns',
+  },
+  {
+    src: `${images.award_moment}`,
+    tag: 'YourStory',
+    title:
+      'DOZEE AND SAVEMOM WIN ANJANI MASHELKAR INCLUSIVE INNOVATION AWARDS 2020',
+    description:
+      'The Anjani Mashelkar Foundation has been pioneering an Inclusive Innovation movement in India for 10 years...',
+    link: 'https://yourstory.com/2020/11/dozee-savemom-win-anjani-mashelkar-inclusive-innovation-award',
+  },
+  {
+    src: `${images.news_product}`,
+    tag: 'YourStory',
+    title: 'மலைவாழ் கர்ப்பிணி பெண்களுக்காக உருவாக்கப்பட்ட "சேவ் மாம்" செயலி',
+    description:
+      'மலைவாழ் பகுதியில் வசிக்கும் கர்ப்பிணிகளுக்காக வடிவமைக்கப்பட்ட பிரத்தியேக செயலியை...',
+    link: 'https://www.bbc.com/tamil/science-62974896',
+  },
+  {
+    src: `${images.senthil_face}`,
+    tag: 'YourStory',
+    title: 'Bringing the hospital home',
+    description:
+      'A low-cost health kit developed by Madurai engineer M Senthil Kumar is a constant companion forpregnant women in interior villages, helping them deliver healthy babies',
+    link: 'https://www.thehindu.com/life-and-style/a-high-tech-low-cost-health-kit-developed-by-madurai-engineer-m-senthil-kumar-is-a-constant-companion-for-pregnant-women-in-interior-villages-helping-them-deliver-healthy-babies/article29475760.ece',
+  },
+];
+
+export const Six = [
+  {
+    src: `${images.jiovio_senthil}`,
+    tag: 'SocioBits.org',
+    title:
+      'The story of JioVio and how its founder Mr. Senthil Kumar gave Madurai the recognition it deserved',
+    description:
+      'Mr. Senthil Kumar, an engineer, and innovator always wondered why tech experts and developers...',
+    link: 'https://www.sociobits.org/2022/08/jio-vio-healthcare-senthil-kumar/9511',
+  },
+  {
+    src: `${images.womens}`,
+    tag: 'The Better India',
+    title:
+      'This Portable Innovation Saves Lives by Bringing Doctors to 30 Lakh Pregnant Women',
+    description:
+      'In rural areas, about 54 percent of mothers attend the recommended visits, compared to...',
+    link: 'https://www.thebetterindia.com/325599/madurai-jiovio-healthcare-startup-pregnancy-risk-monitoring-device-rural-women-infant-mortality/',
   },
 ];
 

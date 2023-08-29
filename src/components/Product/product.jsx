@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 import './product.scss';
@@ -6,6 +7,8 @@ import { Navbar, MobilePics, Map, Contact } from '../../containers';
 import { images } from '../../constants';
 
 const Product = () => {
+  const [index, setIndex] = useState(0);
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -15,7 +18,7 @@ const Product = () => {
 
   const scrollRef = useRef(null);
 
-  const scroll = (direction) => {
+  const scroll = direction => {
     const { current } = scrollRef;
 
     if (current !== null) {
@@ -25,6 +28,10 @@ const Product = () => {
         current.scrollLeft += 300;
       }
     }
+  };
+
+  const handleSelect = selectedIndex => {
+    setIndex(selectedIndex);
   };
 
   return (
@@ -178,7 +185,39 @@ const Product = () => {
         <div className='section__padding'>
           <div className='app__wrapper'>
             <div className='app__wrapper_img'>
-              <img src={images.admin_portal_1} alt='admin-portal-img' />
+              <div className='product__caro'>
+                <Carousel
+                  activeIndex={index}
+                  onSelect={handleSelect}
+                  className='home__caro-content'
+                  controls={false}
+                >
+                  <Carousel.Item>
+                    <img
+                      className='d-block w-100'
+                      src={images.admin_portal_1}
+                      alt='First slide'
+                    />
+                  </Carousel.Item>
+
+                  <Carousel.Item>
+                    <img
+                      className='d-block w-100'
+                      src={images.admin_portal_2}
+                      alt='Second slide'
+                      target='_blank'
+                    />
+                  </Carousel.Item>
+
+                  <Carousel.Item>
+                    <img
+                      className='d-block w-100'
+                      src={images.admin_portal_3}
+                      alt='Third slide'
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
             </div>
             <div className='app__wrapper_info'>
               <h3 className='sub__head-text'>Savemom Admin Portal</h3>
@@ -205,7 +244,39 @@ const Product = () => {
               </p>
             </div>
             <div className='app__wrapper_img app__wrapper_img-reverse'>
-              <img src={images.doctor_portal_1} alt='admin-portal-img' />
+              <div className='product__caro'>
+                <Carousel
+                  activeIndex={index}
+                  onSelect={handleSelect}
+                  className='home__caro-content'
+                  controls={false}
+                >
+                  <Carousel.Item>
+                    <img
+                      className='d-block w-100'
+                      src={images.doctor_portal_1}
+                      alt='First slide'
+                    />
+                  </Carousel.Item>
+
+                  <Carousel.Item>
+                    <img
+                      className='d-block w-100'
+                      src={images.doctor_portal_2}
+                      alt='Second slide'
+                      target='_blank'
+                    />
+                  </Carousel.Item>
+
+                  <Carousel.Item>
+                    <img
+                      className='d-block w-100'
+                      src={images.doctor_portal_3}
+                      alt='Third slide'
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
             </div>
           </div>
         </div>
@@ -213,7 +284,7 @@ const Product = () => {
 
       {/* CONTENT - 6 */}
       <div className='product__content-6'>
-        <h3 className='sub__head-text'>Training Materials</h3>
+        <h3 className='sub__head-text'>Case Studies </h3>
         <small className='head-line' />
         <div className='product__content-6_info'>
           <div className='box'>

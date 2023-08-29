@@ -66,8 +66,12 @@ import google_play from '../assets/google-play.png';
 import allowear from '../assets/allowear.png';
 import allotricorder from '../assets/allotricorder.png';
 import fatscalekit from '../assets/fatscalekit.png';
-import admin_portal_1 from '../assets/Admin_portal-1.png';
+import admin_portal_1 from '../assets/admin_portal-1.png';
+import admin_portal_2 from '../assets/admin_portal-2.png';
+import admin_portal_3 from '../assets/admin_portal-3.png';
 import doctor_portal_1 from '../assets/doctor_portal-1.png';
+import doctor_portal_2 from '../assets/doctor_portal-2.png';
+import doctor_portal_3 from '../assets/doctor_portal-3.png';
 // NEWS & REPORTS
 import yourstory from '../assets/yourstory.png';
 import airmakerchina from '../assets/airmakerchina.png';
@@ -86,6 +90,12 @@ import newinnovation from '../assets/newinnovation.jpg';
 import pregnancy_devicecheckup from '../assets/pregnancy devicecheckup.png';
 import Newinnovationhealthcare from '../assets/Newinnovationhealthcare.png';
 import pilotreportimage from '../assets/pilotreportimage.jpg';
+import senthil_img from '../assets/senthil_img.jpg';
+import news_product from '../assets/p0d1gdbp.png';
+import award_moment from '../assets/award_moment.jpg';
+import senthil_face from '../assets/Senthil-face.jpg';
+import jiovio_senthil from '../assets/JioVio-HealthCare-Senthil-Kumar.jpg';
+import womens from '../assets/womens.jpg';
 
 export default {
   logo,
@@ -149,7 +159,11 @@ export default {
   allotricorder,
   fatscalekit,
   admin_portal_1,
+  admin_portal_2,
+  admin_portal_3,
   doctor_portal_1,
+  doctor_portal_2,
+  doctor_portal_3,
   yourstory,
   airmakerchina,
   yourstorysingapore,
@@ -167,4 +181,10 @@ export default {
   pregnancy_devicecheckup,
   Newinnovationhealthcare,
   pilotreportimage,
+  senthil_img,
+  news_product,
+  award_moment,
+  senthil_face,
+  jiovio_senthil,
+  womens,
 };

@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Contact, Five, Four, Map, Navbar, One, Three, Two } from '../index';
+import {
+  Contact,
+  Six,
+  Five,
+  Four,
+  Map,
+  Navbar,
+  One,
+  Three,
+  Two,
+} from '../index';
 import './MoreNews.scss';
 
 const MoreNews = () => {
@@ -20,14 +30,14 @@ const MoreNews = () => {
 
   const itemsPerPage = 5;
 
-  const allItems = [...One, ...Two, ...Three, ...Four, ...Five];
+  const allItems = [...One, ...Two, ...Three, ...Four, ...Five, ...Six];
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = allItems.slice(indexOfFirstItem, indexOfLastItem);
 
   const totalPages = Math.ceil(allItems.length / itemsPerPage);
 
-  const handlePageChange = (pageNumber) => {
+  const handlePageChange = pageNumber => {
     setCurrentPage(pageNumber);
   };
 

@@ -73,6 +73,251 @@ const OurJourney = () => {
               </p>
             </div>
           </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>AUG 2017</h3>
+              <p>
+                Winner of Elevate 100 from Startup Karnataka received INR
+                14,00,00,000 from grant award.
+              </p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>Nov 2017</h3>
+              <p>
+                Won the Uber Exchange startup award and visited Uber
+                headquarters San Francisco for Startup mentorship program.
+              </p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>Dec 2017</h3>
+              <p>
+                Got shortlisted for Facebook “CODE FOR NEXT Billion” Startup
+                accelerator program.
+              </p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>APR 2018</h3>
+              <p>
+                Top 10 startups got Shortlisted for Mass challenge Israel SIX
+                Month Startup accelerator program. Received the grant award of
+                USD 5,000.
+              </p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>AUG 2018</h3>
+              <p>
+                Winner of Millennium Alliance USAID R6 Grant Award winner under
+                health category and received INR 60,00,000 grant.
+              </p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>SEP 2018</h3>
+              <p>
+                Got selected for Google Launchpad accelerator Class-1 program to
+                attend 3-month startup mentorship program from Google.
+              </p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>OCT 2018</h3>
+              <p>
+                Winner of Billionth Award for the best health innovation in
+                south east Asia by Digital Empowerment foundation.
+              </p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>JAN 2019</h3>
+              <p>
+                Started a commercial pilot program in Maharashtra for providing
+                digital maternal health care for 2000+ tribal mothers in Kasara
+                Tribal village at Thane district.
+              </p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>APR 2019</h3>
+              <p>
+                Got selected for Facebook Global Startup summit in USA and
+                attended the F8 conference.
+              </p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>May 2019</h3>
+              <p>
+                Invited to attend the Google IO 2019 conference in Mountain view
+                USA. Featured in Google for India conference.
+              </p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>JUN 2019</h3>
+              <p>
+                Got selected for the TOP 5 startup for Sustainable Health
+                initiative from Yale Public health program for six-month
+                mentorship from Yale Experts.
+              </p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>AUG 2019</h3>
+              <p>Winner of RIDDL-BIRAC Startup SEED Investment pitch.</p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>SEP 2019</h3>
+              <p>
+                Register “SAVEMOM PRIVATE LIMITED” in India to receive the Seed
+                investment.
+              </p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>OCT 2019</h3>
+              <p>Winner of GoJeK Xccelerator startup Award in Indonesia.</p>
+              <p>Winner of “SANGAMAM DIGITAL INNOVATION” Award. </p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>NOV 2019</h3>
+              <p>
+                Received the “GIFTED CITIZIEN 2019” Award from Noble prize
+                winner in Mexico CDI event organized by UNESCO
+              </p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>FEB 2020</h3>
+              <p>
+                Received a SEED Investment of INR 30,00,000 from BIRAC-RIIDL{' '}
+              </p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>APR 2020</h3>
+              <p>
+                Launched “QCARE” with Tamil nadu state government to monitor the
+                Quarantine people using our health technology. 4000+ people
+                monitored using this application.
+              </p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>DEC 2020</h3>
+              <p>Winner of 2020 Anjani Mashelkar Inclusive Innovation award.</p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>Feb 2021</h3>
+              <p>Developed the Second generation AlloTricorder</p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>May 2021</h3>
+              <p> Winner of Jancare challenge organized by NASSCOM/BIRAC.</p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>Aug 2021</h3>
+              <p>Winner of NIDHI COVID Grant Funding of 40 Lakhs.</p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>Oct 2021</h3>
+              <p>
+                Launched the SIX Pilot project in Vizag District Andra Pradesh.
+              </p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>Dec 2021</h3>
+              <p>Winner of Healthy Mom Healthy Baby content USA.</p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>Feb 2022</h3>
+              <p>
+                Received the SEED Investment of INR 30 Lakhs from DERBI NIDHI
+                Seed Support.
+              </p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>Mar 2022</h3>
+              <p>
+                Signed a contract with Tamilnadu Women Development corporation.
+              </p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>April 2022</h3>
+              <p>
+                Successfully submitted the Pilot Impact Report and Clinical
+                Validation Report to Vizag.
+              </p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>May 2022</h3>
+              <p>Winner of HDFC SMARTUP Parivartan Award.</p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>Oct 2022</h3>
+              <p>
+                Launched SAVEMOM in TamilNadu by Honorable Health Minister.
+                Tamilnadu State.
+              </p>
+            </div>
+          </div>
+          <div className='container right'>
+            <div className='content'>
+              <h3>Apr 2023</h3>
+              <p> Signed a MoU with Ghana Government for SAVEMOM Deployment.</p>
+            </div>
+          </div>
+          <div className='container left'>
+            <div className='content'>
+              <h3>May 2023</h3>
+              <p>
+                Winner Saksham Aavishkar MNCH Challenge received award from
+                USAID
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

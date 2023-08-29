@@ -11,7 +11,7 @@ const NewsReports = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [filterWork, setFilterWork] = useState([]);
 
-  const handleWorkFilter = (item) => {
+  const handleWorkFilter = item => {
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
 
