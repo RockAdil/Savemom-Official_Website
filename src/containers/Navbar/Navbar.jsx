@@ -3,6 +3,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { Link } from 'react-router-dom';
 
 import './navbar.scss';
+import { images } from '../../constants';
 
 const Navbar = ({ nav_bgcolor = 'bg-light', nav_color = 'navbar-light' }) => {
   const scroll = () => {
@@ -20,7 +21,7 @@ const Navbar = ({ nav_bgcolor = 'bg-light', nav_color = 'navbar-light' }) => {
       <div className='container p-1'>
         <Link to='/' className='navbar-brand'>
           <img
-            src='https://www.savemom.in/img/logo.png'
+            src={images.logo}
             width='40'
             height='40'
             style={{ marginRight: '1rem' }}
