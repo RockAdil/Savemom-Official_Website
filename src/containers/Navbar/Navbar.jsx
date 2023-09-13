@@ -93,6 +93,17 @@ const Navbar = ({ nav_bgcolor = 'bg-light', nav_color = 'navbar-light' }) => {
               </Link>
             </li>
             <li className='nav-item'>
+              <a
+                href='https://blogs.savemom.in/'
+                className='nav-link'
+                onClick={scroll}
+                target='_blank'
+                rel='noreferrer'
+              >
+                Blog
+              </a>
+            </li>
+            <li className='nav-item'>
               <Link to='/getinvolved' className='nav-link' onClick={scroll}>
                 Get Involved
               </Link>
